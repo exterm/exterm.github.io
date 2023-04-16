@@ -19,8 +19,10 @@ generated/public/pandoc-highlight.css: transform/pandoc/templates/highlighting-c
 generated/public/posts/%.html: content/posts/%.md transform/pandoc/templates/post.tpl .tool-versions
 	@echo "Generating $@"
 	@mkdir -p $(dir $@)
-	@cd transform/pandoc && \
+	@DATE=$$(echo $< | sed -E 's/.*([0-9]{4}-[0-9]{2}-[0-9]{2}).*/\1/') && \
+		cd transform/pandoc && \
 		pandoc -s -t html5 --template templates/post.tpl $(WORKING_DIR)/$< \
+		--metadata date="$$DATE" \
 		-o $(WORKING_DIR)/$@
 
 index.html: transform/pandoc/templates/index.tpl generated/index.md .tool-versions
