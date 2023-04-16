@@ -2,13 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Home</title>
+    <title>$title$</title>
     <!--<link rel="stylesheet" href="../pandoc-highlight.css">-->
   </head>
   <body>
-  <ul>
-  <li><a
-  href="generated/public/posts/2023-04-16-test.html">Question</a></li>
-  </ul>
+  $body$
   </body>
 </html>
