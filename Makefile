@@ -30,7 +30,7 @@ index.html: transform/pandoc/templates/index.tpl generated/index.md .tool-versio
 	@echo "Generating $@"
 	@cd transform/pandoc && \
 		pandoc -s -t html5 --template templates/index.tpl $(WORKING_DIR)/generated/index.md \
-		--metadata title="Home" \
+		--metadata title="Thinking So" \
 		-o $(WORKING_DIR)/$@
 
 generated/index.md: $(POST_MDS) transform/render_markdown_index.rb .tool-versions
