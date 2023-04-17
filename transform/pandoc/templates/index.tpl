@@ -3,9 +3,12 @@
   <head>
     <meta charset="utf-8">
     <title>$title$</title>
-    <!--<link rel="stylesheet" href="../pandoc-highlight.css">-->
+    <link rel="stylesheet" href="main.css">
   </head>
   <body>
-  $body$
+    <div class="content">
+      <h1>Thinking So</h1>
+      $body$
+    </div>
   </body>
 </html>

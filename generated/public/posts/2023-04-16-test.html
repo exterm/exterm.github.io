@@ -4,14 +4,83 @@
     <meta charset="utf-8">
     <title>Example Post</title>
     <link rel="stylesheet" href="../pandoc-highlight.css">
+    <link rel="stylesheet" href="../../../main.css">
   </head>
   <body>
-  <a href="../../../index.html">Back to front</a>
-  <h1>Example Post</h1>
-  <span class="publish-date">2023-04-16</span>
-  <p>This is some code:</p>
-  <div class="sourceCode" id="cb1"><pre
-  class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> add(a, b):</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> a <span class="op">+</span> b</span></code></pre></div>
+    <a href="../../../index.html">Back to front</a>
+    <div class="content">
+      <h1 class="title">Example Post</h1>
+      <span class="publish-date">2023-04-16</span>
+      <p>This is some Python code:</p>
+      <div class="sourceCode" id="cb1"><pre
+      class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>cache <span class="op">=</span> {<span class="dv">0</span>: <span class="dv">0</span>, <span class="dv">1</span>: <span class="dv">1</span>}</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> fibonacci_of(n):</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> n <span class="kw">in</span> cache:  <span class="co"># Base case</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> cache[n]</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Compute and cache the Fibonacci number</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  cache[n] <span class="op">=</span> fibonacci_of(n <span class="op">-</span> <span class="dv">1</span>) <span class="op">+</span> fibonacci_of(n <span class="op">-</span> <span class="dv">2</span>)  <span class="co"># Recursive case</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> cache[n]</span></code></pre></div>
+      <p>Haskell:</p>
+      <div class="sourceCode" id="cb2"><pre
+      class="sourceCode haskell"><code class="sourceCode haskell"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>fibs <span class="ot">=</span> <span class="dv">0</span> <span class="op">:</span> <span class="dv">1</span> <span class="op">:</span> <span class="fu">zipWith</span> (<span class="op">+</span>) fibs (<span class="fu">tail</span> fibs)</span></code></pre></div>
+      <h2 id="lorem-ipsum">Lorem Ipsum</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
+      in pretium est. Quisque ornare laoreet mi, rhoncus euismod risus
+      semper id. Mauris rhoncus felis mi, nec efficitur turpis venenatis
+      sit amet. Fusce facilisis elit vitae interdum sagittis. Aenean a
+      congue leo. Donec tincidunt, justo nec sagittis placerat, massa
+      orci accumsan urna, aliquet volutpat magna quam eget mi. In hac
+      habitasse platea dictumst. Vestibulum rutrum sapien placerat enim
+      finibus, in volutpat enim porttitor. Sed euismod lacinia odio, sit
+      amet fermentum ante. Fusce eleifend purus ut tempus porta.
+      Curabitur ultrices enim sed gravida pretium. Vivamus porttitor sit
+      amet ex ut euismod. Praesent eget quam elit. Suspendisse molestie
+      velit magna, eget tincidunt leo tincidunt at.</p>
+      <p>In suscipit libero eget lacus feugiat suscipit. Vestibulum ut
+      pretium dui. Aenean fermentum porta nunc, sed porttitor risus
+      consectetur id. Donec auctor lacus elit, ac venenatis leo
+      tristique id. Nam tempus neque tortor, ac lobortis sapien lacinia
+      vulputate. Etiam viverra nunc id turpis volutpat lobortis. Mauris
+      vitae nisi eros. Vivamus eu tellus at est maximus blandit a eget
+      lacus. Suspendisse dapibus pretium vehicula. Fusce bibendum, augue
+      ac aliquam tempus, metus erat ultrices sem, nec rutrum ante ex ac
+      nulla. Vestibulum nec erat libero. Quisque elit nulla, ornare
+      vitae massa vel, rutrum fringilla leo. Quisque interdum est sed
+      felis eleifend, vitae pulvinar turpis rhoncus. Duis porta interdum
+      libero, vel sagittis dui aliquet non.</p>
+      <h2 id="aenean">Aenean</h2>
+      <p>Aenean ultricies quam vel nunc scelerisque, ut vestibulum justo
+      placerat. Maecenas non ultrices enim. Curabitur sit amet augue
+      blandit, varius purus vel, tincidunt metus. Nunc placerat justo
+      sit amet vulputate molestie. Suspendisse mollis nisl nibh, id
+      gravida nibh efficitur quis. Class aptent taciti sociosqu ad
+      litora torquent per conubia nostra, per inceptos himenaeos. In at
+      gravida neque. Etiam vitae blandit nisi, a porta tellus. Donec
+      congue quam mi, sit amet lobortis orci hendrerit sit amet. Sed
+      dapibus, nunc fringilla semper pulvinar, turpis augue finibus
+      ligula, eget laoreet justo mauris a magna.</p>
+      <h3 id="vestibulum">Vestibulum</h3>
+      <p>Sed at ultrices diam. Nunc lacus tellus, porttitor eget sapien
+      eget, tristique cursus nunc. Aenean iaculis nec mi quis elementum.
+      Donec a eleifend est. Fusce malesuada, eros at volutpat posuere,
+      enim turpis sagittis massa, vel sagittis tortor quam sit amet dui.
+      Mauris vulputate dolor sed cursus iaculis. Aliquam fringilla elit
+      et nunc eleifend, vel vestibulum neque aliquet. In placerat, purus
+      laoreet convallis ornare, neque tortor imperdiet neque, eu maximus
+      sapien orci a purus. Phasellus eleifend dignissim mauris, a
+      hendrerit augue pharetra vel. Aliquam imperdiet justo non tellus
+      ullamcorper, nec consequat diam dignissim. Phasellus hendrerit
+      nisi sed est pharetra, vitae rutrum massa tincidunt.</p>
+      <p>Morbi pellentesque ligula in feugiat varius. Donec condimentum
+      pretium dui at dictum. Pellentesque iaculis feugiat neque, ut
+      condimentum sem congue a. Phasellus quis urna vitae erat
+      scelerisque fringilla. Cras felis nisl, malesuada eu elit at,
+      consectetur facilisis lectus. Integer pulvinar mi vitae tellus
+      maximus, vitae faucibus diam pharetra. Pellentesque vitae
+      consequat diam, sed ornare nulla. Mauris dictum nulla mi, sed
+      facilisis quam vehicula vel. Fusce pretium risus ac vestibulum
+      aliquet.</p>
+    </div>
   </body>
 </html>

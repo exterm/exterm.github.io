@@ -22,6 +22,7 @@ generated/public/posts/%.html: content/posts/%.md transform/pandoc/templates/pos
 	@DATE=$$(echo $< | sed -E 's/.*([0-9]{4}-[0-9]{2}-[0-9]{2}).*/\1/') && \
 		cd transform/pandoc && \
 		pandoc -s -t html5 --template templates/post.tpl $(WORKING_DIR)/$< \
+		-f markdown+smart \
 		--metadata date="$$DATE" \
 		-o $(WORKING_DIR)/$@
 
