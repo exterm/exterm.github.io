@@ -1,3 +1,7 @@
+body {
+  font-size: 16px;
+}
+
 .content {
   width: 50em;
   margin-left: auto;
