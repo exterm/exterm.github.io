@@ -36,6 +36,7 @@ jobs:
           path: ~/.asdf
           key: asdf-${{ hashFiles('**/.tool-versions') }}
       - name: install asdf plugins and tools
+        if: steps.cache.outputs.cache-hit != 'true'
         run: |
           asdf plugin add ruby
           asdf plugin add pandoc https://github.com/aksdb/asdf-pandoc.git
