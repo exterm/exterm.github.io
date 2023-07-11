@@ -17,9 +17,11 @@ article, body > nav {
 
 @media (max-width: 50em) {
   article, body > nav {
+    box-sizing: border-box;
     width: 100%;
     margin-left: 0;
     margin-right: 0;
+    padding: 0 1em;
   }
 }
 
@@ -40,7 +42,7 @@ header {
   background-color: #999;
   color: white;
   text-align: center;
-  padding: 20px;
+  padding: 20px 0;
 }
 
 header a {
