@@ -15,5 +15,8 @@
       <span class="publish-date">$date$</span>
       $body$
     <article>
+
+    ${footer.tpl()}
+
   </body>
 </html>

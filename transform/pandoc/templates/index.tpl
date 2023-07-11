@@ -12,5 +12,8 @@
     <nav>
       $body$
     </nav>
+
+    ${footer.tpl()}
+
   </body>
 </html>
