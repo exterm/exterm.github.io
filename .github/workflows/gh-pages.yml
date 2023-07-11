@@ -27,9 +27,19 @@ jobs:
         uses: actions/checkout@v3
       - name: Setup Pages
         uses: actions/configure-pages@v3
-      - name: TODO build site, needs ruby; put in directory _site
+      - name: Install asdf
+      - uses: asdf-vm/actions/setup@v2
+      - name: install asdf plugins and tools
+      - run: |
+          asdf plugin add ruby
+          asdf plugin add pandoc https://github.com/aksdb/asdf-pandoc.git
+          asdf install
+      - name: build website
+        run: make
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
+        with:
+          path: generated/public
 
   deploy:
     environment:

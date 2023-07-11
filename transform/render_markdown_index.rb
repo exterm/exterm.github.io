@@ -21,6 +21,6 @@ post_metadata.sort_by! { |md, metadata| metadata['date'] }.reverse!
 
 File.open(File.join(File.dirname(__FILE__), '..', 'generated', 'index.md'), 'w') do |f|
   post_metadata.each do |md, metadata|
-    f.puts "* _#{metadata['date']}_: [#{metadata['title']}](generated/public/posts/#{md.basename.sub_ext('.html')})"
+    f.puts "* _#{metadata['date']}_: [#{metadata['title']}](posts/#{md.basename.sub_ext('.html')})"
   end
 end
