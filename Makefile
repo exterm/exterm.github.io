@@ -23,14 +23,14 @@ generated/public/posts/%.html: content/posts/%.md transform/pandoc/templates/pos
 		cd transform/pandoc && \
 		pandoc -s -t html5 --template templates/post.tpl $(WORKING_DIR)/$< \
 		-f markdown+smart \
-		--metadata date="$$DATE" \
+		--metadata date="$$DATE" --metadata timestamp=$$(date +%s) \
 		-o $(WORKING_DIR)/$@
 
 index.html: transform/pandoc/templates/index.tpl transform/pandoc/templates/header.tpl generated/index.md .tool-versions
 	@echo "Generating $@"
 	@cd transform/pandoc && \
 		pandoc -s -t html5 --template templates/index.tpl $(WORKING_DIR)/generated/index.md \
-		--metadata title="unused dummy" \
+		--metadata title="Simplexity Quest" --metadata timestamp=$$(date +%s) \
 		-o $(WORKING_DIR)/$@
 
 generated/index.md: $(POST_MDS) transform/render_markdown_index.rb .tool-versions
