@@ -11,3 +11,5 @@ Alternative: https://gohugo.io/
 - [ ] `publish` script that takes a draft as argument
   - [ ] copies `content/drafts/something.md` to `content/posts/YYYY-MM-DD-something.md`
   - [ ] regenerates blog via Makefile, including the index (via metadata)
+- [ ] Serve everything from the `doc` folder (look up in github) so that we don't have "generated" in the url.
+  - URLs should be /indext.html and /posts/post-name.html
