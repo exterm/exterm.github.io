@@ -59,3 +59,7 @@ header a {
 footer {
   margin-top: auto;
 }
+
+code {
+  -webkit-text-size-adjust: 100%;
+}
