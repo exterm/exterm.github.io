@@ -16,7 +16,7 @@ generated/public/pandoc-highlight.css: transform/pandoc/templates/highlighting-c
 		--metadata title="Dummy" \
 		-o $(WORKING_DIR)/generated/public/pandoc-highlight.css
 
-generated/public/posts/%.html: content/posts/%.md transform/pandoc/templates/post.tpl .tool-versions
+generated/public/posts/%.html: content/posts/%.md transform/pandoc/templates/post.tpl transform/pandoc/templates/header.tpl .tool-versions
 	@echo "Generating $@"
 	@mkdir -p $(dir $@)
 	@DATE=$$(echo $< | sed -E 's/.*([0-9]{4}-[0-9]{2}-[0-9]{2}).*/\1/') && \
@@ -26,7 +26,7 @@ generated/public/posts/%.html: content/posts/%.md transform/pandoc/templates/pos
 		--metadata date="$$DATE" \
 		-o $(WORKING_DIR)/$@
 
-index.html: transform/pandoc/templates/index.tpl generated/index.md .tool-versions
+index.html: transform/pandoc/templates/index.tpl transform/pandoc/templates/header.tpl generated/index.md .tool-versions
 	@echo "Generating $@"
 	@cd transform/pandoc && \
 		pandoc -s -t html5 --template templates/index.tpl $(WORKING_DIR)/generated/index.md \

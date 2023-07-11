@@ -3,16 +3,17 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>$title$</title>
+    <title>$title$ - Simplexity Quest</title>
     <link rel="stylesheet" href="../pandoc-highlight.css">
     <link rel="stylesheet" href="../../../main.css">
   </head>
   <body>
-    <a href="../../../index.html">Back to front</a>
-    <div class="content">
+    ${header.tpl()}
+
+    <article>
       <h1 class="title">$title$</h1>
       <span class="publish-date">$date$</span>
       $body$
-    </div>
+    <article>
   </body>
 </html>
