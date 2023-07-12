@@ -1,4 +1,4 @@
-.PHONY: all clean pandoc-prereqs
+.PHONY: all clean pandoc-prereqs show
 
 WORKING_DIR := $(shell pwd)
 POST_MDS=$(shell find content/posts -name '*.md')
@@ -7,6 +7,9 @@ POST_HTMLS=$(patsubst content/posts/%.md,generated/public/posts/%.html,$(POST_MD
 all: pandoc-prereqs $(POST_HTMLS) generated/public/index.html generated/public/main.css
 
 pandoc-prereqs: generated/public/pandoc-highlight.css
+
+show: all
+	xdg-open generated/public/index.html
 
 generated/public/pandoc-highlight.css: transform/pandoc/templates/highlighting-css.tpl .tool-versions
 	@echo "Generating pandoc-highlight.css"
