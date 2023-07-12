@@ -60,6 +60,10 @@ footer {
   margin-top: auto;
 }
 
+footer a {
+  font-size: 0.9em;
+}
+
 code {
   -webkit-text-size-adjust: 100%;
 }
