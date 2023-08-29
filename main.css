@@ -68,18 +68,8 @@ code {
   -webkit-text-size-adjust: 100%;
 }
 
-table th {
-  border-bottom: black 1px solid;
-  border-right: none;
-  border-left: none;
-}
-
 table tr.odd {
   background-color: #eee;
-}
-
-table td {
-  border: none;
 }
 
 table td, table th {
