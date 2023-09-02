@@ -4,5 +4,5 @@
   -
   <a href="https://github.com/exterm">Github</a>
   -
-  <a href="https://layer8.space/@exterm">Mastodon</a>
+  <a rel="me" href="https://layer8.space/@exterm">Mastodon</a>
 </footer>
