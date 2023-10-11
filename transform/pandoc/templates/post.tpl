@@ -14,7 +14,7 @@
       <h1 class="title">$title$</h1>
       <span class="publish-date">$date$</span>
       $body$
-    <article>
+    </article>
 
     ${footer.tpl()}
 
