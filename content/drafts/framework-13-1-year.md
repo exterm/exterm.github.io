@@ -26,9 +26,9 @@ The Framework is very light and thin, but feels sturdy. The keyboard doesn't fle
 
 I dual-boot Windows (for games) and Fedora Linux (for everything else). Windows support is great, everything works out of the box. Fedora Linux support is good, but not perfect. Everything worked out of the box except the built-in brightness buttons. For some reason these work only if automatic brightness is disabled. Brightness buttons on external keyboards work just fine (!?). I haven't looked into this further, but it's not a big deal for me.
 
-A drawback is the less-than-perfect battery life. I get about 4-6 hours of battery life with the screen at 70% brightness while working / surfing on Fedora. That's obviously not great. They've worked hard on this issue and reportedly battery life is a lot better on current models ([official statement](https://frame.work/ca/en/blog/testing-the-battery-life-of-framework-laptop-13-13th-gen-intel-core), [independent review](https://www.tomshardware.com/reviews/framework-laptop-13-intel-2023)).
+A drawback is the less-than-perfect battery life. I get about 5-6 hours of battery life with the screen at 50% brightness while working / surfing on Fedora. That's not great. They've worked hard on this issue and reportedly battery life is a lot better on current models ([official statement](https://frame.work/ca/en/blog/testing-the-battery-life-of-framework-laptop-13-13th-gen-intel-core), [independent review](https://www.tomshardware.com/reviews/framework-laptop-13-intel-2023)).
 
-Performance is as I expected it but I'd recommend you look at up-to-date [benchmarks](https://www.pcgamer.com/framework-13-laptop-intel-core-i7-1370p-mainboard-review-benchmarks/) of the model you're interested in.
+Performance is as I expected it but if this is important to you I'd recommend you look at up-to-date [benchmarks](https://www.pcgamer.com/framework-13-laptop-intel-core-i7-1370p-mainboard-review-benchmarks/) of the model you're interested in.
 
 A few niceties on top: the keyboard lighting adjusts in three brightness levels (and can be turned off) via shortcut. Even the power button brightness can be adjusted in the BIOS. The power button also has a nice feel to it, it's not too easy to press accidentally, and it has a built-in fingerprint reader that works perfectly.
 
@@ -36,7 +36,7 @@ A few niceties on top: the keyboard lighting adjusts in three brightness levels 
 
 I haven't had to repair anything yet and am not looking to upgrade until late 2024 at the earliest, but I've taken the laptop apart out of curiosity. 
 
-It's made to be disassembled and reassembled, and that shoes. The modular design is very well thought out. There are little hints everywhere as well as QR codes that link to replacement parts in their web shop, and all the screws are the same. Chassis screws have little guards on them so they can't fall out.
+It's made to be disassembled and reassembled, and that shows. The modular design is very well thought out. There are little hints everywhere as well as QR codes that link to replacement parts in their web shop, and all the screws are the same. Chassis screws have little guards on them so they can't fall out.
 
 As for upgrading - I could put in the newest mainboard (or even switch to AMD), and I could swap my glossy screen for a matte one, without problem. There are upgraded hinges and speakers too, but I really feel that what I have is good enough. I'm hoping that new parts will stay compatible for years to come - but that's what the company is building its reputation on, so I'm optimistic. So far, 2021, 2022 and 2023 model parts are compatible as far as the third party hardware (processors, chipsets) allows it.
 
