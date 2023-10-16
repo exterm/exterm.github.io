@@ -2,17 +2,17 @@
 title: "The Framework Laptop 13, 1 year in"
 ---
 
-When I first heard about the Framework 13, a new laptop from [a company founded in 2020](https://frame.work), I was instantly excited. A focus on repairability and upgradeability to later generations of hardware? In a nice, slim package? I've been looking for something like this, especially since ThinkPads have gone a bit downhill after Lenovo took over.
+When I first heard about the Framework 13, a new laptop from [a company founded in 2020](https://frame.work), I was instantly excited. A focus on repairability and upgradeability to later generations of hardware? In a nice, slim package? I've been looking for something like this, especially as ThinkPads have gone a bit downhill snce Lenovo took over.
 
 So when I needed a new laptop in fall 2022, I decided to buy a Framework 13 (12th generation intel, DIY model).
 
-![A tweet from 2022 showing a newly unboxed Framework laptop and the comment "New toy! Let’s see what this thing can do".](framework-13-1-year/twitter-post.png)
+![A tweet from 2022 showing my newly unboxed Framework laptop and the comment "New toy! Let’s see what this thing can do".](assets/framework-13-1-year/twitter-post.jpg)
 
 Immediately, friends started asking for my opinion.
 
-![Cory Hutchinson on Twitter, asking for a review of my new laptop.](framework-13-1-year/twitter-reply.png)
+![Cory Hutchinson on Twitter, asking for a review of my new laptop.](assets/framework-13-1-year/twitter-reply.png)
 
-I've been using the laptop for a year now, so it's about time I do that.
+I've been using the laptop for a year now, so it's about time to do that.
 
 My comparison points: I have been using Thinkpads (mostly T series) since 1998 as personal and work laptops, and Macbook Pros at work since 2016. I've encountered various other brands when doing IT support for family & friends. This is the first laptop I've bought that is not a Thinkpad.
 
@@ -20,13 +20,15 @@ My comparison points: I have been using Thinkpads (mostly T series) since 1998 a
 
 The Framework looks sleek and modern overall. The only optical affordance to modularity is that the expansion ports are not a perfect fit. You'll see that even in official product photos.
 
-![Closeup of the expansion ports](framework-13-1-year/ports.jpeg)
+![Closeup of the expansion ports](assets/framework-13-1-year/ports.jpeg)
 
-The keyboard might be the best laptop keyboard I've used since my first laptop, the 1998 Thinkpad 770. It has a nice and chunky feel, a good amount of key travel and just does what it is supposed to do. The trackpad is very smooth. Input wise I couldn't be happier.
+The Framework might have the best laptop keyboard I've used since my first laptop, the 1998 Thinkpad 770. It has a nice and chunky feel, a good amount of key travel and just does what it is supposed to do. The trackpad is very smooth. Input wise I couldn't be happier.
 
 There was no option for a matte screen with this model, but all screens are matte on current models (AMD and 13th gen Intel). The screen is otherwise very good, it's quite bright and has great color reproduction.
 
-When you open the lid more than about 135 degrees, its back edge will hit the table. That's a bit annoying, but a common problem - the Thinkpad T550 I have here for comparison does the same, and my work MacBook just doesn't open that far, which I find worse.
+When you open the lid more than about 135 degrees, its back edge will hit the table. That's a bit annoying, but a common problem - the Thinkpad T560 I have here for comparison does the same, and my work MacBook (Pro 16, 2022) doesn't even open that far, which I find worse.
+
+![Closeup views of the lid and hinge on both a Thinkpad T560 and the Framework Laptop 13.](assets/framework-13-1-year/lids.jpg)
 
 The Framework is very light and thin, but feels sturdy. The keyboard doesn't flex at all. The screen has  bit of flex, but not too much. Overall I'm very happy with the build quality, and the whole thing is super impressive for a modular laptop. It's on par with other good laptops that are a lot less modular.
 
@@ -35,6 +37,8 @@ The Framework is very light and thin, but feels sturdy. The keyboard doesn't fle
 I dual-boot Windows (for games) and Fedora Linux (for everything else). Windows support is great, everything just works. Fedora Linux support is good, but not perfect. Everything worked out of the box except the built-in brightness buttons. For some reason these work only if automatic brightness is disabled. Brightness buttons on external keyboards work just fine (!?). I haven't looked into this further, but it's not a big deal for me.
 
 More of a drawback is the less-than-perfect battery life. I get about 5 hours of battery life with the screen at 50% brightness while working / surfing on Fedora. That's not great. They've worked hard on this issue and reportedly battery life is a lot better on current models ([official statement](https://frame.work/ca/en/blog/testing-the-battery-life-of-framework-laptop-13-13th-gen-intel-core), [independent review](https://www.tomshardware.com/reviews/framework-laptop-13-intel-2023)).
+
+![Screenshot of battery settings in Fedora Linux, showing 2 hours and 48 minutes remaining at 54% charge. Power mode is set to "Power Saver".](assets/framework-13-1-year/battery-life.png)
 
 Performance is as I'd expect in a thin-and-light but if this is important to you I'd recommend you look for up-to-date benchmarks of the model you're interested in ([example for 13th gen intel](https://www.pcgamer.com/framework-13-laptop-intel-core-i7-1370p-mainboard-review-benchmarks/)).
 
@@ -68,7 +72,7 @@ Similar problems do not seem to exist with the other models; a patch for the 11t
 
 ## Conclusion
 
-I'm very happy with almost all aspects of my Framework Laptop 13. I'm looking forward to using it for years to come, and to seeing what Framework will come up with next.
+I'm very happy with most aspects of my Framework Laptop 13. I'm looking forward to using it for years to come, and to seeing what Framework will come up with next.
 
 However, until they've patched the 12th gen Intel model's BIOS, I can't really recommend buying one.
 

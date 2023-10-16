@@ -8,7 +8,7 @@ But it gets more interesting when the decision is not about a binary decision, b
 
 Colored by the "A vs. B" lens, these tradeoffs are often seen as linear, or zero sum.
 
-![](positive-sum-tradeoffs/zero-sum.png)
+![](assets/positive-sum-tradeoffs/zero-sum.png)
 
 with neutral value function $v=B_1+B_2$. Benefit 1 as important as benefit 2, and linear scaling. Total value is constant over the whole range (draw).
 
@@ -18,9 +18,9 @@ However, in reality tradeoffs are rarely linear or zero-sum. (Assume neutral val
 
 Draw diagrams similar to the first where $B$ lines are curved up or down, and corresponding curved value function
 
-![](positive-sum-tradeoffs/positive-sum.png)
+![](assets/positive-sum-tradeoffs/positive-sum.png)
 
-![](positive-sum-tradeoffs/positive-sum_value.png)
+![](assets/positive-sum-tradeoffs/positive-sum_value.png)
 
 ("golden mean")
 

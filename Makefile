@@ -3,8 +3,10 @@
 WORKING_DIR := $(shell pwd)
 POST_MDS=$(shell find content/posts -name '*.md')
 POST_HTMLS=$(patsubst content/posts/%.md,generated/public/posts/%.html,$(POST_MDS))
+SOURCE_POST_ASSETS=$(shell find content/posts/assets -type f ! -name '.*')
+TARGET_POST_ASSETS=$(patsubst content/%,generated/public/%,$(SOURCE_POST_ASSETS))
 
-all: pandoc-prereqs $(POST_HTMLS) generated/public/index.html generated/public/main.css
+all: pandoc-prereqs $(POST_HTMLS) $(TARGET_POST_ASSETS) generated/public/index.html generated/public/main.css
 
 pandoc-prereqs: generated/public/pandoc-highlight.css
 
@@ -18,6 +20,11 @@ generated/public/pandoc-highlight.css: transform/pandoc/templates/highlighting-c
 		pandoc -t html5 --template templates/highlighting-css.tpl highlight-dummy.md \
 		--metadata title="Dummy" \
 		-o $(WORKING_DIR)/generated/public/pandoc-highlight.css
+
+generated/public/posts/assets/%: content/posts/assets/% .tool-versions
+	@echo "Copying asset $< to $@"
+	@mkdir -p $(dir $@)
+	@cp $< $@
 
 generated/public/posts/%.html: content/posts/%.md transform/pandoc/templates/*.tpl .tool-versions
 	@echo "Generating $@"
