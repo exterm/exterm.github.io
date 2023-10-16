@@ -47,7 +47,7 @@ header, footer {
 }
 
 header {
-  background-color: #999;
+  background: linear-gradient(45deg, #069, #eee);
   color: white;
 }
 
