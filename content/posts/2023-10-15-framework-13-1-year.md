@@ -2,7 +2,7 @@
 title: "The Framework Laptop 13, 1 year in"
 ---
 
-When I first heard about the Framework 13, a new laptop from [a company founded in 2020](https://frame.work), I was instantly excited. A focus on repairability and upgradeability to later generations of hardware? In a nice, slim package? I've been looking for something like this, especially as ThinkPads have gone a bit downhill snce Lenovo took over.
+When I first heard about the Framework 13, a new laptop from [a company founded in 2020](https://frame.work), I was instantly excited. A focus on repairability and upgradeability to later generations of hardware? In a nice, slim package? I've been looking for something like this, especially as ThinkPads have gone a bit downhill since Lenovo took over.
 
 So when I needed a new laptop in fall 2022, I decided to buy a Framework 13 (12th generation intel, DIY model).
 
