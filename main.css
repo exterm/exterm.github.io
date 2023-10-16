@@ -76,6 +76,34 @@ table td, table th {
   padding: 0.5em;
 }
 
+figure img {
+  width: 100%;
+}
+
+figcaption {
+  font-size: 0.875em;
+  color: #666;
+  text-align: center;
+  margin-top: 0.5em;
+}
+
+blockquote {
+  position: relative;
+  padding: 1em 2em 0em 2em;
+  margin: 20px 0;
+  font-style: italic;
+  color: #444;
+}
+
+blockquote:before {
+  content: open-quote;
+  position: absolute;
+  top: -0.2em;
+  left: 10px;
+  font-size: 4em;
+  color: #333;
+}
+
 article a[href^="http"]::after,
 article a[href^="https://"]::after
 {
