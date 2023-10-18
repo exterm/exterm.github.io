@@ -1,5 +1,5 @@
 ---
-title: "The Framework Laptop 13, 1 year in"
+title: "The Framework Laptop 13, one year in"
 ---
 
 When I first heard about the Framework 13, a new laptop from [a company founded in 2020](https://frame.work), I was instantly excited. A focus on repairability and upgradeability to later generations of hardware? In a nice, slim package? I've been looking for something like this, especially as ThinkPads have gone a bit downhill since Lenovo took over.
@@ -10,7 +10,7 @@ So when I needed a new laptop in fall 2022, I decided to buy a Framework 13 (12t
 
 Immediately, friends started asking for my opinion.
 
-![Cory Hutchinson on Twitter, asking for a review of my new laptop.](assets/framework-13-1-year/twitter-reply.png)
+![Cory Hutchison on Twitter, asking for a review of my new laptop.](assets/framework-13-1-year/twitter-reply.png)
 
 I've been using the laptop for a year now, so it's about time to do that.
 
@@ -40,7 +40,7 @@ More of a drawback is the less-than-perfect battery life. I get about 5 hours of
 
 ![Screenshot of battery settings in Fedora Linux, showing 2 hours and 48 minutes remaining at 54% charge. Power mode is set to "Power Saver".](assets/framework-13-1-year/battery-life.png)
 
-Performance is as I'd expect in a thin-and-light but if this is important to you I'd recommend you look for up-to-date benchmarks of the model you're interested in ([example for 13th gen intel](https://www.pcgamer.com/framework-13-laptop-intel-core-i7-1370p-mainboard-review-benchmarks/)).
+Performance is as I'd expect in a thin-and-light. It's good but definitely impacted by the fact that a thin laptop can not dissipate heat as well as a desktop or a gaming laptop. If performance is important to you I'd recommend you look for up-to-date benchmarks of the model you're interested in ([example for 13th gen intel](https://www.pcgamer.com/framework-13-laptop-intel-core-i7-1370p-mainboard-review-benchmarks/)).
 
 A few niceties on top: the keyboard lighting adjusts in three brightness levels (and can be turned off) via shortcut. Even the power button brightness can be adjusted in the BIOS. The power button also has a nice feel to it, it's not too easy to press accidentally, and it has a built-in fingerprint reader that works perfectly.
 
