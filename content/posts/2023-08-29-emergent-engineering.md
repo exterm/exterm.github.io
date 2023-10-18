@@ -1,5 +1,5 @@
 ---
-title: "Emergent Engineering"
+title: "Emergent Engineering Summarized"
 ---
 
 Many of today's most pressing problems, like climate change or political polarization, stem from complex systems that were built or significantly modified by us. For example, the society we live in is a complex system that we have constructed. To solve these problems, we need to understand how to make complex systems change their behavior in specific ways.
