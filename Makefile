@@ -58,7 +58,7 @@ generated/public/sitemap.xml: $(POST_MDS) transform/render_sitemap.rb .tool-vers
 	@echo "Generating $@"
 	@mkdir -p $(dir $@)
 	@cd transform && \
-		ruby render_sitemap.rb $(WORKING_DIR)/content/posts $(WORKING_DIR)/$@
+		bundle exec ruby render_sitemap.rb $(WORKING_DIR)/content/posts $(WORKING_DIR)/$@
 
 clean:
 	@echo "Cleaning generated files"
