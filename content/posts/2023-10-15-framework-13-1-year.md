@@ -1,5 +1,5 @@
 ---
-title: "The Framework Laptop 13 Review, One Year In"
+title: "Review: The Framework Laptop 13, One Year In"
 ---
 
 When I first heard about the Framework 13, a new laptop from [a company founded in 2020](https://frame.work), I was instantly excited. A focus on repairability and upgradeability to later generations of hardware? In a nice, slim package? I've been looking for something like this, especially as ThinkPads have gone a bit downhill since Lenovo took over.
