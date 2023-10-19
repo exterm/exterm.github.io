@@ -41,6 +41,10 @@ jobs:
           asdf plugin add ruby
           asdf plugin add pandoc https://github.com/aksdb/asdf-pandoc.git
           asdf install
+      - name: install ruby gems
+        run: |
+          gem install bundler
+          bundle install
       - name: build website
         run: make
       - name: Upload artifact

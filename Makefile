@@ -6,7 +6,7 @@ POST_HTMLS=$(patsubst content/posts/%.md,generated/public/posts/%.html,$(POST_MD
 SOURCE_POST_ASSETS=$(shell find content/posts/assets -type f ! -name '.*')
 TARGET_POST_ASSETS=$(patsubst content/%,generated/public/%,$(SOURCE_POST_ASSETS))
 
-all: pandoc-prereqs $(POST_HTMLS) $(TARGET_POST_ASSETS) generated/public/index.html generated/public/main.css
+all: pandoc-prereqs $(POST_HTMLS) $(TARGET_POST_ASSETS) generated/public/index.html generated/public/main.css generated/public/sitemap.xml
 
 pandoc-prereqs: generated/public/pandoc-highlight.css
 
@@ -53,6 +53,12 @@ generated/public/main.css: main.css
 	@echo "Copying main.css to $@"
 	@mkdir -p $(dir $@)
 	@cp main.css $(WORKING_DIR)/generated/public/main.css
+
+generated/public/sitemap.xml: $(POST_MDS) transform/render_sitemap.rb .tool-versions
+	@echo "Generating $@"
+	@mkdir -p $(dir $@)
+	@cd transform && \
+		ruby render_sitemap.rb $(WORKING_DIR)/content/posts $(WORKING_DIR)/$@
 
 clean:
 	@echo "Cleaning generated files"
