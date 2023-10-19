@@ -1,4 +1,5 @@
 body {
+  --small-font-size: 0.875em;
   font-size: 16px;
   font-family: system-ui;
   margin: 0;
@@ -39,31 +40,30 @@ header, footer {
 header {
   background: linear-gradient(45deg, #069, #eee);
   color: white;
-}
-
-header a {
-  color: white;
-  text-decoration: none;
+  a {
+    color: white;
+    text-decoration: none;
+  }
 }
 
 footer {
   margin-top: auto;
-}
-
-footer a {
-  font-size: 0.9em;
+  a {
+    font-size: var(--small-font-size);
+  }
 }
 
 code {
   -webkit-text-size-adjust: 100%;
 }
 
-table tr.odd {
-  background-color: #eee;
-}
-
-table td, table th {
-  padding: 0.5em;
+table {
+  td, th {
+    padding: 0.5em;
+  }
+  tr.odd {
+    background-color: #eee;
+  }
 }
 
 figure img {
@@ -71,7 +71,7 @@ figure img {
 }
 
 figcaption {
-  font-size: 0.875em;
+  font-size: var(--small-font-size);
   color: #666;
   text-align: center;
   margin-top: 0.5em;
