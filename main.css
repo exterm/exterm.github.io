@@ -40,7 +40,7 @@ header, footer {
 header {
   background: linear-gradient(45deg, #069, #eee);
   color: white;
-  a {
+  & a {
     color: white;
     text-decoration: none;
   }
@@ -48,7 +48,7 @@ header {
 
 footer {
   margin-top: auto;
-  a {
+  & a {
     font-size: var(--small-font-size);
   }
 }
@@ -58,10 +58,10 @@ code {
 }
 
 table {
-  td, th {
+  & td, & th {
     padding: 0.5em;
   }
-  tr.odd {
+  & tr.odd {
     background-color: #eee;
   }
 }
