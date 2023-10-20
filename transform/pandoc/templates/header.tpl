@@ -1,5 +1,5 @@
 <header>
   <a href=/>
-    <h1>Simplexity Quest</h1>
+    <h2>Simplexity Quest</h2>
   </a>
 </header>
