@@ -6,6 +6,8 @@
     <title>$title$ - Simplexity Quest</title>
     <link rel="stylesheet" href="../pandoc-highlight.css?ts=$timestamp$">
     <link rel="stylesheet" href="../main.css?ts=$timestamp$">
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="$title$" />
   </head>
   <body>
     ${header.tpl()}
