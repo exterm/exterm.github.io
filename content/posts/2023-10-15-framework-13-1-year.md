@@ -2,6 +2,10 @@
 title: "Review: The Framework Laptop 13, One Year In"
 ---
 
+*Update 2023-10-21: Framework's CEO has [posted an update on the BIOS situation](https://community.frame.work/t/12th-gen-intel-core-bios-3-06-beta/25726/370), but it doesn't change my criticism. I will update this blog post once there's a final release of a patched BIOS.*
+
+<br/>
+
 When I first heard about the Framework 13, a new laptop from [a company founded in 2020](https://frame.work), I was instantly excited. A focus on repairability and upgradeability to later generations of hardware? In a nice, slim package? I've been looking for something like this, especially as ThinkPads have gone a bit downhill since Lenovo took over.
 
 So when I needed a new laptop in fall 2022, I decided to buy a Framework 13 (12th generation intel, DIY model).
