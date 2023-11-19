@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>$title$</title>
     <link rel="stylesheet" href="main.css?ts=$timestamp$">
+    <link rel="alternate" type="application/rss+xml" title="$title$ RSS" href="rss.xml" />
   </head>
   <body>
     ${header.tpl()}
