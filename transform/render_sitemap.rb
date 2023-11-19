@@ -1,30 +1,35 @@
 require "nokogiri"
 require "date"
+require "pathname"
 
 # render a sitemap from all post sources (markdown files)
 
+input_dir = Pathname.new(ARGV[0])
+output_file = Pathname.new(ARGV[1])
+
 DOMAIN = "https://simplexity.quest"
-TARGET = "../generated/public/sitemap.xml"
 
 def git_mtime(path)
   DateTime.parse(%x(git log -1 --pretty="format:%ci" #{path}).strip)
 end
 
+all_mds = Pathname.glob(input_dir + "*.md")
+
 Nokogiri::XML::Builder.new(encoding: "UTF-8") do |xml|
   xml.urlset(xmlns: "http://www.sitemaps.org/schemas/sitemap/0.9") {
     xml.url {
-      xml.loc "https://simplexity.quest/"
+      xml.loc DOMAIN
       # last modification for the index is the latest of all posts
-      latest_post = Dir.glob("../content/posts/**/*.md").map { |path| git_mtime(path) }.max
+      latest_post = all_mds.map { |path| git_mtime(path) }.max
       xml.lastmod latest_post.iso8601
     }
-    Dir.glob("../content/posts/*.md").each do |path|
+    all_mds.each do |path|
       xml.url {
-        xml.loc "#{DOMAIN}/posts/#{File.basename(path, ".md")}.html"
+        xml.loc "#{DOMAIN}/posts/#{path.basename(".md")}.html"
         xml.lastmod git_mtime(path).iso8601
       }
     end
   }
 end.to_xml.tap do |xml|
-  File.write(TARGET, xml)
+  File.write(output_file, xml)
 end
