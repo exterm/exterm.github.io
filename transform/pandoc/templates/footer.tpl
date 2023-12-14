@@ -7,7 +7,7 @@
     -
     <a rel="me" href="https://layer8.space/@exterm">Mastodon</a>
   </p>
-  <a href="rss.xml">
+  <a href="/rss.xml">
     <span class="rss-icon"></span>Subscribe via RSS
   </a>
 </footer>
