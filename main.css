@@ -1,5 +1,6 @@
 body {
   --small-font-size: 0.8em;
+  --subdued-text-color: #666;
   font-size: 18px;
   font-family: system-ui;
   margin: 0;
@@ -53,6 +54,15 @@ footer {
   }
 }
 
+aside#footnotes {
+  margin-top: 5em;
+  font-size: var(--small-font-size);
+
+  hr {
+    color: var(--subdued-text-color);
+  }
+}
+
 code {
   -webkit-text-size-adjust: 100%;
 }
@@ -78,7 +88,7 @@ figure img {
 
 figcaption {
   font-size: var(--small-font-size);
-  color: #666;
+  color: var(--subdued-text-color);
   text-align: center;
   margin-top: 0.5em;
 }
@@ -135,6 +145,10 @@ article a[href^="https://"]
     padding-left: 1em;
     padding-right: 1em;
   }
+}
+
+:target {
+  background-color: #ff8;
 }
 
 span.rss-icon {
