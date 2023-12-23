@@ -3,10 +3,13 @@
 WORKING_DIR := $(shell pwd)
 POST_MDS=$(shell find content/posts -name '*.md')
 POST_HTMLS=$(patsubst content/posts/%.md,generated/public/posts/%.html,$(POST_MDS))
+PAGE_MDS=$(shell find content/pages -name '*.md')
+PAGE_HTMLS=$(patsubst content/pages/%.md,generated/public/pages/%.html,$(PAGE_MDS))
 SOURCE_POST_ASSETS=$(shell find content/posts/assets -type f ! -name '.*')
 TARGET_POST_ASSETS=$(patsubst content/%,generated/public/%,$(SOURCE_POST_ASSETS))
+TIMESTAMP=$(shell date +%s)
 
-all: pandoc-prereqs $(POST_HTMLS) $(TARGET_POST_ASSETS) generated/public/index.html generated/public/main.css generated/public/sitemap.xml generated/public/rss.xml
+all: pandoc-prereqs $(POST_HTMLS) $(TARGET_POST_ASSETS) $(PAGE_HTMLS) generated/public/index.html generated/public/main.css generated/public/sitemap.xml generated/public/rss.xml
 
 pandoc-prereqs: generated/public/pandoc-highlight.css
 
@@ -33,14 +36,23 @@ generated/public/posts/%.html: content/posts/%.md transform/pandoc/templates/*.t
 		cd transform/pandoc && \
 		pandoc -s -t html5 --template templates/post.tpl $(WORKING_DIR)/$< \
 		-f markdown+smart \
-		--metadata date="$$DATE" --metadata timestamp=$$(date +%s) \
+		--metadata date="$$DATE" --metadata timestamp=$$TIMESTAMP \
+		-o $(WORKING_DIR)/$@
+
+generated/public/pages/%.html: content/pages/%.md transform/pandoc/templates/*.tpl .tool-versions
+	@echo "Generating $@"
+	@mkdir -p $(dir $@)
+	@cd transform/pandoc && \
+		pandoc -s -t html5 --template templates/page.tpl $(WORKING_DIR)/$< \
+		-f markdown+smart \
+		--metadata timestamp=$$TIMESTAMP \
 		-o $(WORKING_DIR)/$@
 
 generated/public/index.html: transform/pandoc/templates/*.tpl generated/index.md .tool-versions
 	@echo "Generating $@"
 	@cd transform/pandoc && \
 		pandoc -s -t html5 --template templates/index.tpl $(WORKING_DIR)/generated/index.md \
-		--metadata title="Simplexity Quest" --metadata timestamp=$$(date +%s) \
+		--metadata title="Simplexity Quest" --metadata timestamp=$$TIMESTAMP \
 		-o $(WORKING_DIR)/$@
 
 generated/index.md: $(POST_MDS) transform/render_markdown_index.rb .tool-versions
