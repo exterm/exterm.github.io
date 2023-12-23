@@ -113,7 +113,7 @@ Rails' `lib/` folder is more than just a directory. It's a manifestation of a fu
 
 For many Rails developers, this is a new skill to master, which can seem daunting. However, the `lib/` folder is a great place to start, and `packwerk` can guide you on your way.
 
-![Zelda: It's dangerous to go alone! Take this.](assets/lib-is-for-libraries/It's_dangerous_to_go_alone!_Take_this_upscaled_2.png)
+![Zelda: It's dangerous to go alone! Take this.](assets/lib-is-for-libraries/It's_dangerous_to_go_alone_Take_this_upscaled_2.png)
 
 ## Further Reading
 
