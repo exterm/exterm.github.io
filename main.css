@@ -57,6 +57,12 @@ code {
   -webkit-text-size-adjust: 100%;
 }
 
+pre.sourceCode {
+  margin-left: 1em;
+  padding: 1em;
+  background-color: #eee;
+}
+
 table {
   & td, & th {
     padding: 0.5em;
