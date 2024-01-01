@@ -26,8 +26,8 @@ generated/public/pandoc-highlight.css: transform/pandoc/templates/highlighting-c
 
 generated/public/posts/assets/%: content/posts/assets/% .tool-versions
 	@echo "Copying asset $< to $@"
-	@mkdir -p $(dir $@)
-	@cp $< $@
+	@mkdir -p "$(dir $@)"
+	@cp "$<" "$@"
 
 generated/public/posts/%.html: content/posts/%.md transform/pandoc/templates/*.tpl .tool-versions
 	@echo "Generating $@"
