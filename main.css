@@ -20,6 +20,24 @@ article, body > nav {
   margin-right: auto;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  position: relative;
+
+  & a {
+    color: inherit;
+    text-decoration: none;
+
+    &:hover::before {
+      content: '\1F517'; /* Unicode for the link chain icon */
+      position: absolute;
+      left: -1.3em;
+      top: 50%;
+      transform: translateY(-50%);
+      opacity: 0.7;
+    }
+  }
+}
+
 body > nav {
   padding-top: 2em;
 }

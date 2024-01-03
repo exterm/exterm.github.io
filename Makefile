@@ -36,6 +36,7 @@ generated/public/posts/%.html: content/posts/%.md transform/pandoc/templates/*.t
 		cd transform/pandoc && \
 		pandoc -s -t html5 --template templates/post.tpl $(WORKING_DIR)/$< \
 		-f markdown+smart \
+		--lua-filter=link-headers.lua \
 		--metadata date="$$DATE" --metadata timestamp=$$TIMESTAMP \
 		-o $(WORKING_DIR)/$@
 
@@ -45,6 +46,7 @@ generated/public/pages/%.html: content/pages/%.md transform/pandoc/templates/*.t
 	@cd transform/pandoc && \
 		pandoc -s -t html5 --template templates/page.tpl $(WORKING_DIR)/$< \
 		-f markdown+smart \
+		--lua-filter=link-headers.lua \
 		--metadata timestamp=$$TIMESTAMP \
 		-o $(WORKING_DIR)/$@
 
