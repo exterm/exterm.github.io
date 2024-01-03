@@ -26,9 +26,11 @@ And it's especially pronounced in Rails thanks to the [Active Record pattern](ht
 
 You can divide the code in your application into two categories: code that is specific to your application's core domain, and code that is more generic.
 
-Code that's not specific to your application's core domain may concern responsibilities like HTTP clients, authentication and authorization, (generic) serialization and deserialization, and so on. For these concerns, we usually don't write the code ourselves - we use libraries, gems. Almost always those are third party gems from [rubygems.org](https://rubygems.org/).
+DHH, the creator of Rails, [stated](https://github.com/rails/rails/pull/47843#issuecomment-1515367267):
 
-So we could say that we separate _libraries_ from _application code_.
+> lib/ is intended to be for non-app specific library code that just happens to live in the app for now (usually pending extraction into open source or whatever). Everything app specific that's part of the domain model should live in app/models (that directory is for POJOs as much as ARs).
+
+Code that's not specific to your application's core domain may concern responsibilities like HTTP clients, authentication and authorization, (generic) serialization and deserialization, and so on. For these concerns, we usually don't write the code ourselves - we use libraries, gems. Almost always those are third party gems from [rubygems.org](https://rubygems.org/).
 
 But what if what we need is not available in a well maintained library? What if the functionality we need is so small that it doesn't warrant introducing an external dependency? Maybe it's something that we can easily write ourselves?
 
