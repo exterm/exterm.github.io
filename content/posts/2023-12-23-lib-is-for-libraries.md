@@ -136,4 +136,4 @@ For many Rails developers, this is a new skill to master, which can seem dauntin
 - To avoid or resolve dependency cycles, you'll quickly find yourself needing a working unserstanding of [inversion of control and dependency injection](https://stackoverflow.com/questions/3058/what-is-inversion-of-control#3140). Create abstractions and invert dependencies so they are opposed to the control flow. This probably deserves its own article.
 
 [^packwerk]: I developed the idea and core functionality of `packwerk` in 2020 during my time at Shopify, supported and inspired by a lot of very smart people around me. Together with the team we later polished the tool and [open sourced it](https://github.com/shopify/packwerk), and it has since found significant adoption in the Ruby on Rails community.
-[^enforce_dependencies]: I don't think the default is great an am [trying to get it changed](https://github.com/Shopify/packwerk/pull/384).
+[^enforce_dependencies]: I don't think the default is great and am [working to get it changed](https://github.com/Shopify/packwerk/pull/384).
