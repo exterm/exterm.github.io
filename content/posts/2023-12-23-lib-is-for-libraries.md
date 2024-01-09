@@ -34,7 +34,7 @@ Code that's not specific to your application's core domain may concern responsib
 
 But what if what we need is not available in a well maintained library? What if the functionality we need is so small that it doesn't warrant introducing an external dependency? Maybe it's something that we can easily write ourselves?
 
-We want the code to live in the same repository as our application, but it's not specific to our application's domain. Luckily, Rails is prepared for this scenario.That's why `app/` and `lib/` folders exist!
+You may want the code to live in the same repository as your application, even though it's not specific to your application's domain. Luckily, Rails is prepared for this scenario. That's why `app/` and `lib/` folders exist!
 
 Library code within your repository is still library code. So it should go into `lib/`.
 
@@ -62,7 +62,7 @@ Remember, we want to be able to understand our libraries without having to under
 
 ## Complication: Autoloading
 
-In Rails versions before 7.1, `lib/` is not autoloaded, which means that if you want to use code from `lib/` in your application, you need to explicitly require it. While in theory this is a good thing because it makes a dependency explicit, requiring a file will add its contents to the global namespace. That means _requiring a file once, in one place, will make it available everywhere_, and implicit dependencies on it will creep in. So the advantage of explicit dependencies doesn't really exist in Rails apps in practice. Also, without autoloading, the code in `lib/` will not be reloaded after making changes locally, which is inconvenient.
+In Rails versions before 7.1, `lib/` is not autoloaded, which means that if you want to use code from `lib/` in your application, you need to explicitly require it. While in theory this is a good thing because it makes a dependency explicit, requiring a file explicitly will still add its contents to the global namespace. That means _requiring a file once, in one place, will make it available everywhere_, and implicit dependencies on it will creep in. So the advantage of explicit dependencies doesn't really exist in Rails apps in practice. Also, without autoloading, the code in `lib/` will not be reloaded after making changes locally, which is inconvenient.
 
 But you don't want to autoload all of `lib/` either. There's likely a lot of code in there that your application doesn't need to run in a production environment, like rake tasks. Autoloading it in development implies eagerloading in production, which would slow down application startup, use up additional memory, and potentially cause bugs in production.
 
