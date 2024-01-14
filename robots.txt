@@ -1,0 +1,14 @@
+# OpenAI's web crawler used for training the GPT models
+User-agent: GPTBot
+Disallow: /
+
+# Google-Extended is standalone product token that web publishers can use to manage whether their sites help improve
+# Bard and Vertex AI generative APIs, including future generations of models that power those products.
+User-agent: Google-Extended
+Disallow: /
+
+# allow all others
+User-agent: *
+Disallow:
+
+Sitemap: https://simplexity.quest/sitemap.xml
