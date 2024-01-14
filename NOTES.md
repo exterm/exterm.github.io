@@ -2,8 +2,6 @@
 
 ## TO DO
 
-- [ ] add static pages to sitemap
-
 ## IDEAS
 
 - collect metadata
