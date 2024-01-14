@@ -20,12 +20,13 @@ Nokogiri::XML::Builder.new(encoding: "UTF-8") do |xml|
     xml.url {
       xml.loc(DOMAIN + "/")
       # last modification for the index is the latest of all posts
-      latest_post = all_mds.map { |path| git_mtime(path) }.max
-      xml.lastmod latest_post.iso8601
+      latest_page = all_mds.map { |path| git_mtime(path) }.max
+      xml.lastmod latest_page.iso8601
     }
     all_mds.each do |path|
       xml.url {
-        xml.loc "#{DOMAIN}/posts/#{path.basename(".md")}.html"
+        dir, file = path.each_filename.to_a[-2, 2]
+        xml.loc "#{DOMAIN}/#{dir}/#{File.basename(file, ".md")}.html"
         xml.lastmod git_mtime(path).iso8601
       }
     end

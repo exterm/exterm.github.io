@@ -68,11 +68,11 @@ generated/public/main.css: main.css
 	@mkdir -p $(dir $@)
 	@cp main.css $(WORKING_DIR)/generated/public/main.css
 
-generated/public/sitemap.xml: $(POST_MDS) transform/render_sitemap.rb .tool-versions
+generated/public/sitemap.xml: $(POST_MDS) $(PAGE_MDS) transform/render_sitemap.rb .tool-versions
 	@echo "Generating $@"
 	@mkdir -p $(dir $@)
 	@cd transform && \
-		bundle exec ruby render_sitemap.rb $(WORKING_DIR)/content/posts $(WORKING_DIR)/$@
+		bundle exec ruby render_sitemap.rb "$(WORKING_DIR)/content/{pages,posts}" $(WORKING_DIR)/$@
 
 generated/public/rss.xml: $(POST_MDS) transform/render_rss.rb .tool-versions
 	@echo "Generating $@"
