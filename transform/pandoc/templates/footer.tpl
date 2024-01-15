@@ -16,6 +16,6 @@
       <span class="rss-icon"></span>Subscribe via RSS
     </a>
     -
-    <a href="/pages/about.html#services-offered">✨Consulting Services✨</a>
+    ✨<a href="/pages/about.html#services-offered">Consulting Services</a>✨
   </p>
 </footer>
