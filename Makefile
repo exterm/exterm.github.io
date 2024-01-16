@@ -7,9 +7,11 @@ PAGE_MDS=$(shell find content/pages -name '*.md')
 PAGE_HTMLS=$(patsubst content/pages/%.md,generated/public/pages/%.html,$(PAGE_MDS))
 SOURCE_POST_ASSETS=$(shell find content/posts/assets -type f ! -name '.*')
 TARGET_POST_ASSETS=$(patsubst content/%,generated/public/%,$(SOURCE_POST_ASSETS))
+SOURCE_PAGE_ASSETS=$(shell find content/pages/assets -type f ! -name '.*')
+TARGET_PAGE_ASSETS=$(patsubst content/%,generated/public/%,$(SOURCE_PAGE_ASSETS))
 TIMESTAMP=$(shell date +%s)
 
-all: pandoc-prereqs $(POST_HTMLS) $(TARGET_POST_ASSETS) $(PAGE_HTMLS) generated/public/index.html generated/public/main.css generated/public/sitemap.xml generated/public/rss.xml generated/public/robots.txt
+all: pandoc-prereqs $(POST_HTMLS) $(TARGET_POST_ASSETS) $(PAGE_HTMLS) $(TARGET_PAGE_ASSETS) generated/public/index.html generated/public/main.css generated/public/sitemap.xml generated/public/rss.xml generated/public/robots.txt
 
 pandoc-prereqs: generated/public/pandoc-highlight.css
 
@@ -24,7 +26,12 @@ generated/public/pandoc-highlight.css: transform/pandoc/templates/highlighting-c
 		--metadata title="Dummy" \
 		-o $(WORKING_DIR)/generated/public/pandoc-highlight.css
 
-generated/public/posts/assets/%: content/posts/assets/% .tool-versions
+generated/public/posts/assets/%: content/posts/assets/%
+	@echo "Copying asset $< to $@"
+	@mkdir -p "$(dir $@)"
+	@cp "$<" "$@"
+
+generated/public/pages/assets/%: content/pages/assets/%
 	@echo "Copying asset $< to $@"
 	@mkdir -p "$(dir $@)"
 	@cp "$<" "$@"

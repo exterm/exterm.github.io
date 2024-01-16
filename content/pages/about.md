@@ -2,6 +2,8 @@
 title: "About Me"
 ---
 
+![Looking into the sunset over the port of Hamburg, Germany](assets/about/header.jpg)
+
 Hi! I'm Philip Mueller. I help shape complex systems to be easy to maintain and extend. With tons of experience tackling hard problems in software and a leading role in modularizing Shopify's monolith, I bring a wealth of knowledge in the architecture and collaborative creation of software.
 
 *I am currently available for consulting services.*
