@@ -43,6 +43,6 @@ Starting mid-January 2024:
 
 ### Say Hi!
 
-If this sounds interesting, reach out via [email](mailto:services+homepage-about@simplexity.quest) or LinkedIn (see footer). I'm looking forward to hearing from you!
+If this sounds interesting, reach out via [email](mailto:services+homepage-about@simplexity.quest). I'm looking forward to hearing from you!
 
 _By the way:_ I'll grant a significant discount off my usual rates if your company or project substantially contributes to combating climate change, biodiversity loss or the spread of misinformation.
