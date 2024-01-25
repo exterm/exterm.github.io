@@ -65,7 +65,7 @@ generated/public/index.html: transform/pandoc/templates/*.tpl generated/index.md
 	@echo "Generating $@"
 	@cd transform/pandoc && \
 		pandoc -s -t html5 --template templates/index.tpl $(WORKING_DIR)/generated/index.md \
-		--metadata title="Simplexity Quest" --metadata timestamp=$$TIMESTAMP \
+		--metadata title="Simplexity Quest Consulting" --metadata timestamp=$$TIMESTAMP \
 		--metadata canonical="$(PRODUCTION_HOST)/index.html" \
 		-o $(WORKING_DIR)/$@
 
