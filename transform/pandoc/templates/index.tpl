@@ -6,6 +6,7 @@
     <title>$title$</title>
     <link rel="stylesheet" href="main.css?ts=$timestamp$">
     <link rel="alternate" type="application/rss+xml" title="$title$ RSS" href="rss.xml">
+    <link rel="canonical" href="$canonical$" />
   </head>
   <body>
     ${header.tpl()}

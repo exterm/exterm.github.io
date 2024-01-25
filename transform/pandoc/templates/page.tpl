@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>$title$ - Simplexity Quest</title>
     <link rel="stylesheet" href="../main.css?ts=$timestamp$">
+    <link rel="canonical" href="$canonical$" />
     <meta property="og:type" content="article">
     <meta property="og:title" content="$title$">
   </head>

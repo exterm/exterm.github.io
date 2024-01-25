@@ -39,22 +39,25 @@ generated/public/pages/assets/%: content/pages/assets/%
 generated/public/posts/%.html: content/posts/%.md transform/pandoc/templates/*.tpl .tool-versions
 	@echo "Generating $@"
 	@mkdir -p $(dir $@)
-	@DATE=$$(echo $< | sed -E 's/.*([0-9]{4}-[0-9]{2}-[0-9]{2}).*/\1/') && \
+	@page_path=$(patsubst generated/public/%,%,$@); \
+		DATE=$$(echo $< | sed -E 's/.*([0-9]{4}-[0-9]{2}-[0-9]{2}).*/\1/') && \
 		cd transform/pandoc && \
 		pandoc -s -t html5 --template templates/post.tpl $(WORKING_DIR)/$< \
 		-f markdown+smart \
 		--lua-filter=link-headers.lua \
 		--metadata date="$$DATE" --metadata timestamp=$$TIMESTAMP \
+		--metadata canonical="https://simplexity.quest/$$page_path" \
 		-o $(WORKING_DIR)/$@
 
 generated/public/pages/%.html: content/pages/%.md transform/pandoc/templates/*.tpl .tool-versions
 	@echo "Generating $@"
 	@mkdir -p $(dir $@)
-	@cd transform/pandoc && \
+	@page_path=$(patsubst generated/public/%,%,$@); \
+	  cd transform/pandoc && \
 		pandoc -s -t html5 --template templates/page.tpl $(WORKING_DIR)/$< \
 		-f markdown+smart \
 		--lua-filter=link-headers.lua \
-		--metadata timestamp=$$TIMESTAMP \
+		--metadata timestamp=$$TIMESTAMP --metadata canonical="https://simplexity.quest/$$page_path" \
 		-o $(WORKING_DIR)/$@
 
 generated/public/index.html: transform/pandoc/templates/*.tpl generated/index.md .tool-versions
@@ -62,6 +65,7 @@ generated/public/index.html: transform/pandoc/templates/*.tpl generated/index.md
 	@cd transform/pandoc && \
 		pandoc -s -t html5 --template templates/index.tpl $(WORKING_DIR)/generated/index.md \
 		--metadata title="Simplexity Quest" --metadata timestamp=$$TIMESTAMP \
+		--metadata canonical="https://simplexity.quest/index.html" \
 		-o $(WORKING_DIR)/$@
 
 generated/index.md: $(POST_MDS) transform/render_markdown_index.rb .tool-versions
