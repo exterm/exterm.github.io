@@ -80,4 +80,4 @@ jobs:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: 172af9127a9642800024b76b4bec0524
           projectName: simplexity-quest
-          directory: ./generated/public
+          directory: ../generated/public
