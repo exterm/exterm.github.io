@@ -48,7 +48,7 @@ generated/public/posts/%.html: content/posts/%.md transform/pandoc/templates/*.t
 		pandoc -s -t html5 --template templates/post.tpl $(WORKING_DIR)/$< \
 		-f markdown+smart \
 		--lua-filter=link-headers.lua \
-		--metadata date="$$DATE" --metadata timestamp=$$TIMESTAMP \
+		--metadata date="$$DATE" --metadata timestamp=$(TIMESTAMP) \
 		--metadata canonical="$(PRODUCTION_HOST)/$$page_path" \
 		-o $(WORKING_DIR)/$@
 
@@ -60,14 +60,14 @@ generated/public/pages/%.html: content/pages/%.md transform/pandoc/templates/*.t
 		pandoc -s -t html5 --template templates/page.tpl $(WORKING_DIR)/$< \
 		-f markdown+smart \
 		--lua-filter=link-headers.lua \
-		--metadata timestamp=$$TIMESTAMP --metadata canonical="$(PRODUCTION_HOST)/$$page_path" \
+		--metadata timestamp=$(TIMESTAMP) --metadata canonical="$(PRODUCTION_HOST)/$$page_path" \
 		-o $(WORKING_DIR)/$@
 
 generated/public/index.html: transform/pandoc/templates/*.tpl generated/index.md .tool-versions
 	@echo "Generating $@"
 	@cd transform/pandoc && \
 		pandoc -s -t html5 --template templates/index.tpl $(WORKING_DIR)/generated/index.md \
-		--metadata title="Simplexity Quest Consulting" --metadata timestamp=$$TIMESTAMP \
+		--metadata title="Simplexity Quest Consulting" --metadata timestamp=$(TIMESTAMP) \
 		--metadata canonical="$(PRODUCTION_HOST)/index.html" \
 		-o $(WORKING_DIR)/$@
 
