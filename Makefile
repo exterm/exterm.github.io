@@ -10,6 +10,7 @@ TARGET_POST_ASSETS=$(patsubst content/%,generated/public/%,$(SOURCE_POST_ASSETS)
 SOURCE_PAGE_ASSETS=$(shell find content/pages/assets -type f ! -name '.*')
 TARGET_PAGE_ASSETS=$(patsubst content/%,generated/public/%,$(SOURCE_PAGE_ASSETS))
 TIMESTAMP=$(shell date +%s)
+PRODUCTION_HOST=https://simplexity.quest
 
 all: pandoc-prereqs $(POST_HTMLS) $(TARGET_POST_ASSETS) $(PAGE_HTMLS) $(TARGET_PAGE_ASSETS) generated/public/index.html generated/public/main.css generated/public/sitemap.xml generated/public/rss.xml generated/public/robots.txt
 
@@ -20,7 +21,7 @@ show: all
 
 generated/public/pandoc-highlight.css: transform/pandoc/templates/highlighting-css.tpl .tool-versions
 	@echo "Generating pandoc-highlight.css"
-	@mkdir -p $(dir $@)
+	@mkdir -p $(@D)
 	@cd transform/pandoc && \
 		pandoc -t html5 --template templates/highlighting-css.tpl highlight-dummy.md \
 		--metadata title="Dummy" \
@@ -38,7 +39,7 @@ generated/public/pages/assets/%: content/pages/assets/%
 
 generated/public/posts/%.html: content/posts/%.md transform/pandoc/templates/*.tpl .tool-versions
 	@echo "Generating $@"
-	@mkdir -p $(dir $@)
+	@mkdir -p $(@D)
 	@page_path=$(patsubst generated/public/%,%,$@); \
 		DATE=$$(echo $< | sed -E 's/.*([0-9]{4}-[0-9]{2}-[0-9]{2}).*/\1/') && \
 		cd transform/pandoc && \
@@ -46,18 +47,18 @@ generated/public/posts/%.html: content/posts/%.md transform/pandoc/templates/*.t
 		-f markdown+smart \
 		--lua-filter=link-headers.lua \
 		--metadata date="$$DATE" --metadata timestamp=$$TIMESTAMP \
-		--metadata canonical="https://simplexity.quest/$$page_path" \
+		--metadata canonical="$(PRODUCTION_HOST)/$$page_path" \
 		-o $(WORKING_DIR)/$@
 
 generated/public/pages/%.html: content/pages/%.md transform/pandoc/templates/*.tpl .tool-versions
 	@echo "Generating $@"
-	@mkdir -p $(dir $@)
+	@mkdir -p $(@D)
 	@page_path=$(patsubst generated/public/%,%,$@); \
 	  cd transform/pandoc && \
 		pandoc -s -t html5 --template templates/page.tpl $(WORKING_DIR)/$< \
 		-f markdown+smart \
 		--lua-filter=link-headers.lua \
-		--metadata timestamp=$$TIMESTAMP --metadata canonical="https://simplexity.quest/$$page_path" \
+		--metadata timestamp=$$TIMESTAMP --metadata canonical="$(PRODUCTION_HOST)/$$page_path" \
 		-o $(WORKING_DIR)/$@
 
 generated/public/index.html: transform/pandoc/templates/*.tpl generated/index.md .tool-versions
@@ -65,34 +66,34 @@ generated/public/index.html: transform/pandoc/templates/*.tpl generated/index.md
 	@cd transform/pandoc && \
 		pandoc -s -t html5 --template templates/index.tpl $(WORKING_DIR)/generated/index.md \
 		--metadata title="Simplexity Quest" --metadata timestamp=$$TIMESTAMP \
-		--metadata canonical="https://simplexity.quest/index.html" \
+		--metadata canonical="$(PRODUCTION_HOST)/index.html" \
 		-o $(WORKING_DIR)/$@
 
 generated/index.md: $(POST_MDS) transform/render_markdown_index.rb .tool-versions
 	@echo "Generating $@"
-	@mkdir -p $(dir $@)
+	@mkdir -p $(@D)
 	@cd transform && \
 		ruby render_markdown_index.rb $(WORKING_DIR)/content/posts $(WORKING_DIR)/$@
 
 generated/public/main.css: main.css
 	@echo "Copying main.css to $@"
-	@mkdir -p $(dir $@)
+	@mkdir -p $(@D)
 	@cp main.css $(WORKING_DIR)/generated/public/main.css
 
 generated/public/robots.txt: robots.txt
 	@echo "Copying robots.txt to $@"
-	@mkdir -p $(dir $@)
+	@mkdir -p $(@D)
 	@cp robots.txt $(WORKING_DIR)/generated/public/robots.txt
 
 generated/public/sitemap.xml: $(POST_MDS) $(PAGE_MDS) transform/render_sitemap.rb .tool-versions
 	@echo "Generating $@"
-	@mkdir -p $(dir $@)
+	@mkdir -p $(@D)
 	@cd transform && \
 		bundle exec ruby render_sitemap.rb "$(WORKING_DIR)/content/{pages,posts}" $(WORKING_DIR)/$@
 
 generated/public/rss.xml: $(POST_MDS) transform/render_rss.rb .tool-versions
 	@echo "Generating $@"
-	@mkdir -p $(dir $@)
+	@mkdir -p $(@D)
 	@cd transform && \
 		bundle exec ruby render_rss.rb $(WORKING_DIR)/content/posts $(WORKING_DIR)/$@
 
