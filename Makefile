@@ -9,10 +9,12 @@ SOURCE_POST_ASSETS=$(shell find content/posts/assets -type f ! -name '.*')
 TARGET_POST_ASSETS=$(patsubst content/%,generated/public/%,$(SOURCE_POST_ASSETS))
 SOURCE_PAGE_ASSETS=$(shell find content/pages/assets -type f ! -name '.*')
 TARGET_PAGE_ASSETS=$(patsubst content/%,generated/public/%,$(SOURCE_PAGE_ASSETS))
+SOURCE_TOPLEVEL_STATICS=$(shell find content/toplevel-static -type f ! -name '.*')
+TARGET_TOPLEVEL_STATICS=$(patsubst content/toplevel-static/%,generated/public/%,$(SOURCE_TOPLEVEL_STATICS))
 TIMESTAMP=$(shell date +%s)
 PRODUCTION_HOST=https://simplexity.quest
 
-all: pandoc-prereqs $(POST_HTMLS) $(TARGET_POST_ASSETS) $(PAGE_HTMLS) $(TARGET_PAGE_ASSETS) generated/public/index.html generated/public/main.css generated/public/sitemap.xml generated/public/rss.xml generated/public/robots.txt
+all: pandoc-prereqs $(POST_HTMLS) $(TARGET_POST_ASSETS) $(PAGE_HTMLS) $(TARGET_PAGE_ASSETS) generated/public/index.html generated/public/sitemap.xml generated/public/rss.xml $(TARGET_TOPLEVEL_STATICS)
 
 pandoc-prereqs: generated/public/pandoc-highlight.css
 
@@ -75,15 +77,10 @@ generated/index.md: $(POST_MDS) transform/render_markdown_index.rb .tool-version
 	@cd transform && \
 		ruby render_markdown_index.rb $(WORKING_DIR)/content/posts $(WORKING_DIR)/$@
 
-generated/public/main.css: main.css
-	@echo "Copying main.css to $@"
+$(TARGET_TOPLEVEL_STATICS): generated/public/%: content/toplevel-static/%
+	@echo "Copying $< to $@"
 	@mkdir -p $(@D)
-	@cp main.css $(WORKING_DIR)/generated/public/main.css
-
-generated/public/robots.txt: robots.txt
-	@echo "Copying robots.txt to $@"
-	@mkdir -p $(@D)
-	@cp robots.txt $(WORKING_DIR)/generated/public/robots.txt
+	@cp $< $@
 
 generated/public/sitemap.xml: $(POST_MDS) $(PAGE_MDS) transform/render_sitemap.rb .tool-versions
 	@echo "Generating $@"
