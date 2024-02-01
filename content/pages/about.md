@@ -36,7 +36,10 @@ Hi! I'm Philip Mueller. I help shape complex systems to be easy to maintain and 
 
 ### Current Availability
 
-As of early February 2024: 8-16 hrs/week
+As of early February 2024:
+
+- 8-16 hrs/week for short-term projects
+- 16-24 hrs/week for commitments of 6 months or more
 
 ### Say Hi!
 
