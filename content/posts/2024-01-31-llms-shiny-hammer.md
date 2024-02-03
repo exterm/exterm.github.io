@@ -171,7 +171,7 @@ Of course, there will still be rare edge cases in which the output of the agent 
 * Check out [OpsLevel's docs for inferred service descriptions](https://docs.opslevel.com/docs/ai-inferred-service-descriptions).
 
 [^1]:
-     https://www.glean.com/blog/glean-chat-launch-announcement
+     [Glean Chat launch announcement](https://www.glean.com/blog/glean-chat-launch-announcement)
 
 [^2]:
-     https://www.honeycomb.io/blog/introducing-query-assistant
+     [HoneyComb: Introducing Query Assistant](https://www.honeycomb.io/blog/introducing-query-assistant)
