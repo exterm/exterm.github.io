@@ -27,7 +27,7 @@ Hi! I'm Philip Mueller. I help shape complex systems to be easy to maintain and 
 
 ## Services Offered
 
-- **Modularity Consultation**: Specializing in Ruby on Rails applications, but love to work on other tech stacks. I have significant experience with Python, C++ and Erlang, among others.
+- **Modularity Consultation**: Specializing in Ruby on Rails applications, but love to work on other tech stacks.
 - **Embedding in a Team**: I'll identify and help improve systemic weaknesses while contributing to the team's mission.
 - **Large System Architecture Design**: For scalability, low cognitive load, and developer satisfaction.
 - **Tackling Complex Software Design Challenges**: Applying my extensive experience to your unique problems.
