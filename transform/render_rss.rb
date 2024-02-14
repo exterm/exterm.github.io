@@ -34,7 +34,7 @@ Nokogiri::XML::Builder.new(encoding: "UTF-8") do |xml|
       all_mds.each do |path|
         xml.item {
           xml.title extract_title(path)
-          link = "#{DOMAIN}/posts/#{path.basename(".md")}.html"
+          link = "#{DOMAIN}/posts/#{path.basename(".md")}"
           xml.link link
           xml.guid link
           xml.pubDate git_mtime(path).rfc822

@@ -26,7 +26,7 @@ Nokogiri::XML::Builder.new(encoding: "UTF-8") do |xml|
     all_mds.each do |path|
       xml.url {
         dir, file = path.each_filename.to_a[-2, 2]
-        xml.loc "#{DOMAIN}/#{dir}/#{File.basename(file, ".md")}.html"
+        xml.loc "#{DOMAIN}/#{dir}/#{File.basename(file, ".md")}"
         xml.lastmod git_mtime(path).iso8601
       }
     end
