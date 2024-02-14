@@ -8,7 +8,7 @@ Hi! I'm Philip Mueller. I help shape complex systems to be easy to maintain and 
 
 *I am currently available for consulting services.*
 
-### Recent Events
+## Recent Events
 
 - **2018-2021**: Led Componentization, a major rearchitecture of [Shopify](https://shopify.ca)'s monolith.
   - Wrote [Under Deconstruction](https://shopify.engineering/shopify-monolith) about my architecture work at Shopify, which reached #1 on Hacker News.
