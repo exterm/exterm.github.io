@@ -24,6 +24,6 @@ post_metadata.sort_by! { |md, metadata| metadata['date'] }.reverse!
 
 File.open(output_file, 'w') do |f|
   post_metadata.each do |md, metadata|
-    f.puts "* _#{metadata['date']}:_ [#{metadata['title']}](posts/#{md.basename})"
+    f.puts "* _#{metadata['date']}:_ [#{metadata['title']}](posts/#{md.basename.sub_ext("")})"
   end
 end
