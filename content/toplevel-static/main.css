@@ -68,7 +68,6 @@ header {
 footer {
   margin-top: auto;
   & a {
-    color: black;
     font-size: var(--small-font-size);
   }
 }
