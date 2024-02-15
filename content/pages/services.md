@@ -42,6 +42,6 @@ As of early February 2024:
 
 ### Say Hi!
 
-If this sounds interesting, reach out via [email](mailto:services+website@simplexity.quest). I'm looking forward to hearing from you!
+If this sounds interesting, [reach out via email](mailto:services+website@simplexity.quest) or [book a free 30 min intro call](https://cal.com/philip-mueller/30min) with me. I'm looking forward to hearing from you!
 
 _By the way:_ I'll grant a significant discount off my usual rates if your company or project substantially contributes to combating climate change, biodiversity loss or the spread of misinformation.
