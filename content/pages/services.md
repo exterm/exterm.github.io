@@ -20,9 +20,9 @@ Hi! I'm Philip Mueller. I help shape complex systems to be easy to maintain and 
 
 - **Developer Happiness** is the most accurate proxy for productivity.
 - **Short Feedback Cycles and Low Cognitive Load** are essential for effective development.
-- **Iterative Approach**: Solving complex problems one step at a time.
+- **Iterative Approach**: Solve complex problems one step at a time.
 - **Focus on Trajectories**: Continuous improvement trumps fixed goals.
-- **Beyond Buzzwords**: Avoid the pitfalls of turning ideas into brands.
+- **Beyond Buzzwords**: Avoid the pitfalls of ideas turned into brands.
 - **Emphasis on Readability and Malleability**: Make code navigable and systems easy to understand and modify.
 
 ## Services Offered
