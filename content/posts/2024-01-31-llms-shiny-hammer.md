@@ -164,6 +164,8 @@ Of course, there will still be rare edge cases in which the output of the agent 
 * OpenAI’s published innovations since the release of GPT-4 mostly concern tooling, UX, and monetization; fundamental capabilities have stayed similar.
 * Langchain does a lot of things but is at times confusing, unstable and buggy. It’s still a great framework for rapid prototyping, and, if you’re careful, for production applications. Just make sure everything works as expected.
 
+_Update 2024-02-16: Microsoft just published new research on [GraphRAG](https://www.microsoft.com/en-us/research/blog/graphrag-unlocking-llm-discovery-on-narrative-private-data/), an improved approach to RAG that uses a knowledge graph for retrieval. It looks very promising and could solve many of the problems I encountered._
+
 ## Further Reading
 
 * Github published a [great blog post](https://github.blog/2023-10-30-the-architecture-of-todays-llm-applications/) about all the key pieces and how they fit together.
