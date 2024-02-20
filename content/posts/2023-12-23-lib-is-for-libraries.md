@@ -2,7 +2,7 @@
 title: "The mystery of Rails' `lib/` folder 📚"
 ---
 
-**Update 2024-01-03:** I've corrected the setup instructions for `packwerk`. Thanks to Adam Zapaśnik for [pointing out the oversight](https://www.reddit.com/r/rails/comments/18vzjz0/comment/kg3yyam).
+**Update 2024-02-19:** With the release of `packwerk` 3.2.0, the instructions in this article now work as originally intended again. The article has been simplified to reflect this.
 
 _In Ruby on Rails applications, one of the directories that come with the default structure is `lib/`. What is it for? How should it be used? And why should you care?_
 
@@ -96,8 +96,6 @@ bin/packwerk init
 
 As part of the initialization process, `packwerk` will place a `package.yml` file in the root folder of your application, which defines the root package. All your code that is not explicitly in another package is in the root package.
 
-In that root `package.yml`, change the value of `enforce_dependencies` to `false` so that `packwerk` doesn't complain about your application using its libraries[^enforce_dependencies].
-
 ⚠️ _In the following, replace `lib/` with `app/lib/` if you're using the `app/lib/` setup._
 
 To enforce a boundary between application code and library code, we just drop another `package.yml` file into the `lib/` folder:
@@ -136,4 +134,3 @@ For many Rails developers, this is a new skill to master, which can seem dauntin
 - To avoid or resolve dependency cycles, you'll quickly find yourself needing a working unserstanding of [inversion of control and dependency injection](https://stackoverflow.com/questions/3058/what-is-inversion-of-control#3140). Create abstractions and invert dependencies so they are opposed to the control flow. This probably deserves its own article.
 
 [^packwerk]: I developed the idea and core functionality of `packwerk` in 2020 during my time at Shopify, supported and inspired by a lot of very smart people around me. Together with the team we later polished the tool and [open sourced it](https://github.com/shopify/packwerk), and it has since found significant adoption in the Ruby on Rails community.
-[^enforce_dependencies]: I don't think the default is great and am [working to get it changed](https://github.com/Shopify/packwerk/pull/384).
