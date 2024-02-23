@@ -1,5 +1,5 @@
 ---
-title: "Consulting Services"
+title: "Simplexity Quest Consulting Services"
 ---
 
 ![Looking into the sunset over the port of Hamburg, Germany](assets/services/header.jpg)
