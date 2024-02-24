@@ -35,13 +35,10 @@ Hi! I'm Philip Mueller. I help shape complex systems to be easy to maintain and 
 
 ### Current Availability
 
-As of early February 2024:
-
-- 8-16 hrs/week for short-term projects
-- 16-24 hrs/week for commitments of 6 months or more
+As of February 24, 2024, I'm available for 8-16 hrs/week in the short term. I'm open to dicussing more intensive engagements starting towards Fall 2024.
 
 ### Say Hi!
 
-If this sounds interesting, [reach out via email](mailto:services+website@simplexity.quest) or [book a free 30 min intro call](https://cal.com/philip-mueller/30min) with me. I'm looking forward to hearing from you!
+[Reach out via email](mailto:services+website@simplexity.quest) or [book a free 30 min intro call](https://cal.com/philip-mueller/30min) with me. I'm looking forward to hearing from you!
 
 _By the way:_ I'll grant a significant discount off my usual rates if your company or project substantially contributes to combating climate change, biodiversity loss or the spread of misinformation.
