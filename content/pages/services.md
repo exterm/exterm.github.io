@@ -15,6 +15,7 @@ Hi! I'm Philip Mueller. I help shape complex systems to be easy to maintain and 
   - Developed the gradual modularization tool [Packwerk](https://github.com/shopify/packwerk), which has been the subject of [numerous talks and publications](packwerk-publications).
 - **2021-2022**: Prototyped Domain Events and a general API Gateway at Shopify
 - **2023**: [Developed LLM based product features](../posts/2024-01-31-llms-shiny-hammer) and co-designed [object model extensions](https://www.linkedin.com/posts/opslevel_need-to-add-cost-data-to-your-services-maybe-activity-7158483661464502272-5m4d) for [OpsLevel](https://opslevel.com).
+- **2024**: Supporting a major software architecture transition at [One Medical](https://onemedical.com).
 
 ## Philosophy
 
