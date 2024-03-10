@@ -144,7 +144,7 @@ article a[href^="https://"]
 }
 
 @media (max-width: 700px) {
-  article, body > nav {
+  article, main {
     box-sizing: border-box;
     width: 100%;
     margin-left: 0;
