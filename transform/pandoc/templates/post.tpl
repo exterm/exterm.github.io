@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>$title$ - Simplexity Quest</title>
-    <link rel="stylesheet" href="../pandoc-highlight.css">
-    <link rel="stylesheet" href="../main.css">
+    <link rel="stylesheet" href="../pandoc-highlight.css?ts=$timestamp$">
+    <link rel="stylesheet" href="../main.css?ts=$timestamp$">
     <link rel="canonical" href="$canonical$" />
     <meta property="og:type" content="article" />
     <meta property="og:title" content="$title$" />

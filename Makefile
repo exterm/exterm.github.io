@@ -11,6 +11,7 @@ SOURCE_PAGE_ASSETS=$(shell find content/pages/assets -type f ! -name '.*')
 TARGET_PAGE_ASSETS=$(patsubst content/%,generated/public/%,$(SOURCE_PAGE_ASSETS))
 SOURCE_TOPLEVEL_STATICS=$(shell find content/toplevel-static -type f ! -name '.*')
 TARGET_TOPLEVEL_STATICS=$(patsubst content/toplevel-static/%,generated/public/%,$(SOURCE_TOPLEVEL_STATICS))
+TIMESTAMP=$(shell date +%s)
 PRODUCTION_HOST=https://simplexity.quest
 
 all: pandoc-prereqs $(POST_HTMLS) $(TARGET_POST_ASSETS) $(PAGE_HTMLS) $(TARGET_PAGE_ASSETS) generated/public/index.html generated/public/sitemap.xml generated/public/rss.xml $(TARGET_TOPLEVEL_STATICS)
@@ -47,7 +48,7 @@ generated/public/posts/%.html: content/posts/%.md transform/pandoc/templates/*.t
 		pandoc -s -t html5 --template templates/post.tpl $(WORKING_DIR)/$< \
 		-f markdown+smart \
 		--lua-filter=link-headers.lua \
-		--metadata date="$$DATE" \
+		--metadata date="$$DATE" --metadata timestamp=$(TIMESTAMP) \
 		--metadata canonical="$(PRODUCTION_HOST)/$$page_path" \
 		-o $(WORKING_DIR)/$@
 
@@ -59,14 +60,14 @@ generated/public/pages/%.html: content/pages/%.md transform/pandoc/templates/*.t
 		pandoc -s -t html5 --template templates/page.tpl $(WORKING_DIR)/$< \
 		-f markdown+smart \
 		--lua-filter=link-headers.lua \
-		--metadata canonical="$(PRODUCTION_HOST)/$$page_path" \
+		--metadata timestamp=$(TIMESTAMP) --metadata canonical="$(PRODUCTION_HOST)/$$page_path" \
 		-o $(WORKING_DIR)/$@
 
 generated/public/index.html: transform/pandoc/templates/*.tpl generated/index.md .tool-versions
 	@echo "Generating $@"
 	@cd transform/pandoc && \
 		pandoc -s -t html5 --template templates/index.tpl $(WORKING_DIR)/generated/index.md \
-		--metadata title="Simplexity Quest" \
+		--metadata title="Simplexity Quest" --metadata timestamp=$(TIMESTAMP) \
 		--metadata canonical="$(PRODUCTION_HOST)/index" \
 		-o $(WORKING_DIR)/$@
 
