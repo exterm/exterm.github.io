@@ -12,9 +12,8 @@
     ${header.tpl()}
 
     <main>
-      <h1>Philip Mueller, Software Consultant</h1>
       <section>
-        <h2>Services</h2>
+        <h2>Software Consulting Services</h2>
         <p>I have extensive experience wrangling large scale systems in and around software. <b>Experience that you can benefit from.</b></p>
 
         <p><a href=pages/services>Learn more about the services I offer.</a></p>
