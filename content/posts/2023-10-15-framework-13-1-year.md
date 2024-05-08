@@ -2,6 +2,8 @@
 title: "Review: The Framework Laptop 13, One Year In"
 ---
 
+*Update 2024-05-08: [As of April](https://news.ycombinator.com/item?id=40043540), Framework has finally released a BIOS update for the 12th gen Intel mainboard. I've updated this article accordingly.*
+
 When I first heard about the Framework 13, a new laptop from [a company founded in 2020](https://frame.work), I was instantly excited. A focus on repairability and upgradeability to later generations of hardware? In a nice, slim package? I've been looking for something like this, especially as ThinkPads have gone a bit downhill since Lenovo took over.
 
 So when I needed a new laptop in fall 2022, I decided to buy a Framework 13 (12th generation intel, DIY model).
@@ -66,16 +68,10 @@ They've been very transparent on most things so far. For example, there was a tr
 
 Of course it would have been better for this bug to never exist, but we're talking about a company in the second year of its existence, building a new laptop from scratch.
 
-On the other hand, there is one thing I am really unhappy about. The current BIOS for the 12th gen Intel model has multiple publicly disclosed security vulnerabilities from 2022 that have not yet been patched. They [released a beta patch in December '22](https://community.frame.work/t/12th-gen-intel-core-bios-3-06-beta/25726), but as of October '23, almost a year later, the patch has not been finalized.
-
-Similar problems do not seem to exist with the other models; a patch for the 11th gen model BIOS [has been released this year](https://community.frame.work/t/responded-11th-gen-intel-core-bios-3-17-release/25137) so they do seem to have people working on BIOSes. I hope the 12th gen BIOS issue is some kind of strange outlier that we'll get a good explanation for at some point.
-
-*Update 2023-10-21: Framework's CEO has [posted an update on the BIOS situation](https://community.frame.work/t/12th-gen-intel-core-bios-3-06-beta/25726/370), but it doesn't change my criticism. I will update this blog post once there's a final release of a patched BIOS.*
+On the other hand, there is one thing I am really unhappy about. The original BIOS for the 12th gen Intel model had multiple security vulnerabilities that were publicly disclosed in 2022, and it took Framework _almost two years_ to release a final patch. They [released a beta patch in December '22](https://community.frame.work/t/12th-gen-intel-core-bios-3-06-beta/25726), but it took until January '24 to release the final patch. This is really not acceptable. They say they have taken measures to prevent this from happening again, but It's not entirely clear whether these measures are sufficient.
 
 ## Conclusion
 
 I'm very happy with most aspects of my Framework Laptop 13. I'm looking forward to using it for years to come, and to seeing what Framework will come up with next.
 
-However, until they've patched the 12th gen Intel model's BIOS, I can't really recommend buying one.
-
-Framework folks, if you're reading this - please get that BIOS patch ready, I would love to be able to recommend your products.
+However, I'm still a little hesitant to recommend buying one. The BIOS issue is a big deal, and I first want to see them prove that they can deliver updates reliably going forward.
