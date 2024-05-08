@@ -72,7 +72,7 @@ One good workaround has been [proposed](https://github.com/rails/rails/issues/37
 
 Any folder under `app/` will be autoloaded by default, including `app/lib/`.
 
-In Rails 7.1, [a new default was introduced](https://github.com/rails/rails/pull/48572) to autoload `lib/`, specifically omitting the subfolders `lib/assets/`, `lib/tasks/` and `lib/generators/`, which means you don't need Xavier's workaround anymore.
+In Rails 7.1, [a new default was introduced](https://github.com/rails/rails/pull/49032) to autoload `lib/`, specifically omitting the subfolders `lib/assets/`, `lib/tasks/` and `lib/generators/`, which means you don't need Xavier's workaround anymore.
 
 So, going forward I will assume that the library code your application relies on is autoloaded - either it is in `app/lib/` or it is in `lib/` and autoloaded via Rails 7.1's `config.autoload_lib`.
 
