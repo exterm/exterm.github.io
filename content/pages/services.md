@@ -36,7 +36,7 @@ Hi! I'm Philip Mueller. I help shape complex systems to be easy to maintain and 
 
 ### Current Availability
 
-As of February 24, 2024, I'm available for 8-16 hrs/week in the short term. I'm open to dicussing more intensive engagements starting towards Fall 2024.
+As of June 2024, I'm fully booked for the time being.
 
 ### Say Hi!
 
