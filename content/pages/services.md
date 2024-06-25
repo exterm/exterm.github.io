@@ -6,8 +6,6 @@ title: "Simplexity Quest Consulting Services"
 
 Hi! I'm Philip Mueller. I help shape complex systems to be easy to maintain and extend. With tons of experience tackling hard problems in software and a leading role in modularizing Shopify's monolith, I bring a wealth of knowledge in the architecture and collaborative creation of software.
 
-*I am currently available for consulting services.*
-
 ## Recent Events
 
 - **2018-2021**: Led Componentization, a major rearchitecture of [Shopify](https://shopify.ca)'s monolith.
@@ -15,8 +13,8 @@ Hi! I'm Philip Mueller. I help shape complex systems to be easy to maintain and 
   - Developed the gradual modularization tool [Packwerk](https://github.com/shopify/packwerk), which has been the subject of [numerous talks and publications](packwerk-publications).
 - **2021-2022**: Prototyped Domain Events and a general API Gateway at Shopify
 - **2023**: [Developed LLM based product features](../posts/2024-01-31-llms-shiny-hammer) and co-designed [object model extensions](https://www.linkedin.com/posts/opslevel_need-to-add-cost-data-to-your-services-maybe-activity-7158483661464502272-5m4d) for [OpsLevel](https://opslevel.com).
-- **2024**: Supporting a major software architecture transition at [One Medical](https://onemedical.com).
-
+- **2024**: Supporting major software architecture transitions at [One Medical](https://onemedical.com) and [Ramp](https://ramp.com/).
+ 
 ## Philosophy
 
 - **Developer Happiness** is the most accurate proxy for productivity.
@@ -36,7 +34,7 @@ Hi! I'm Philip Mueller. I help shape complex systems to be easy to maintain and 
 
 ### Current Availability
 
-As of June 2024, I'm fully booked for the time being.
+As of June 2024, I'm fully booked for the time being. If you've read this far, you should still reach out and say hi.
 
 ### Say Hi!
 
