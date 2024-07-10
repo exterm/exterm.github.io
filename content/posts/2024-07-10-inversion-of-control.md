@@ -2,11 +2,19 @@
 title: "Inversion of Control Patterns"
 ---
 
-Managing complexity is one of the hardest parts of developing software systems. Inversion of Control is the most important tool we have available. However, I find that it's not generally well understood and people tend to shy away from it. Let's talk about where you'd even use it.
+Managing complexity is one of the hardest problems in developing software systems. Luckily, with Inversion of Control we have a powerful tool at our disposal. However, I find that it's not generally well understood and people tend to shy away from it. Let's talk about where you'd even use it: Architectural boundaries.
 
 An architectural boundary lets you cut a software system into two parts where one doesn’t know about the other and is thus not going to be affected by changes to it. Boundaries are the only thing that can decouple local complexity from global complexity. If you want to make large software systems easy to work with, you'll want to have them.
 
-A visual way to describe boundaries is as lines you draw in an architecture diagram that are only crossed by dependencies in one direction. This restriction of unidirectionality can not generally be imposed on control flow. We need a way to make dependencies independent of control flow. That's where Inversion of Control comes in.
+A visual way to describe boundaries is as lines you draw in an architecture diagram that are only crossed by dependencies in one direction.
+
+![The arrows represent "depends on" relationships. The bottom partition of the architecture is independent of the top and will thus not be affected by changes to it.](assets/inversion-of-control/boundary.png)
+
+This restriction of unidirectionality can not generally be imposed on control flow though. The control flow in the same application may look like this:
+
+![Here, the control flow crosses the boundary in both directions. Changing that would change the semantics of the application.](assets/inversion-of-control/control_flow.png)
+
+We need a way to have dependencies that oppose the direction of control flow. That's where Inversion of Control comes in.
 
 ## Patterns
 
