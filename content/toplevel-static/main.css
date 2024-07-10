@@ -97,8 +97,12 @@ table {
   }
 }
 
+figure:has(> img) {
+  text-align: center;
+}
+
 figure img {
-  width: 100%;
+  max-width: 100%;
 }
 
 figcaption {
