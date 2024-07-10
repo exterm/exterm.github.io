@@ -85,6 +85,7 @@ pre.sourceCode {
   margin-left: 1em;
   padding: 1em;
   background-color: #eee;
+  font-size: var(--small-font-size);
 }
 
 table {
