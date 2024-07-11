@@ -22,7 +22,6 @@ Note that the kind of dependency we care about here is a static reference.
 
 ![Solid arrows are dependencies, dashed arrows are control flow.](assets/inversion-of-control/legend.png)
 
-## Pseudocode Examples
 ### No Inversion
 
 ![A depends on B, A calls into B.](assets/inversion-of-control/no_inversion.png)
@@ -41,8 +40,12 @@ def do_something()
 end
 ```
 
-### Full Decoupling
+- explicit relationship between A and B
+- traceable statically from A to B
 
+➡️ *Great default*
+
+### Full Decoupling
 ![A and B depend on C, A calls into B.](assets/inversion-of-control/full_decoupling.png)
 
 ```ruby
@@ -84,6 +87,12 @@ def thing_was_done(payload)
 
 end
 ```
+
+- implicit relationship between A and B
+- traceable statically, indirectly, inconveniently
+- similar to a generalized event bus
+
+➡️ *Use only when you need to achieve very low coupling*
 
 ### Plugin Mechanism
 
@@ -128,6 +137,12 @@ def thing_was_done()
 
 end
 ```
+
+- explicit relationship between A and B
+- traceable statically from B to A
+- if in the same repository, all plugins can be easily found by grepping
+
+➡️ *The cheapest way to establish a boundary with bidirectional control flow*
 
 ## Caveats
 
