@@ -2,7 +2,7 @@
   <p>Made with <span title="exploding head emoji">🤯</span> by Philip Mueller.</p>
 
   <p>
-    ✨<a href="/pages/services">Consulting Services</a>✨
+    <a href="/pages/services">Consulting Services</a>
     -
     <a href="https://www.linkedin.com/in/philipmueller1">LinkedIn</a>
     -
