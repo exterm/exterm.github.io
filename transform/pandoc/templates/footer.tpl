@@ -1,10 +1,10 @@
 <footer>
-  <p>Made with <span title="exploding head emoji">🤯</span> by Philip Mueller.</p>
+  <p>Made with <span title="exploding head emoji">🤯</span> by Philip Theus.</p>
 
   <p>
     <a href="/pages/services">Consulting Services</a>
     -
-    <a href="https://www.linkedin.com/in/philipmueller1">LinkedIn</a>
+    <a href="https://www.linkedin.com/in/philiptheus">LinkedIn</a>
     -
     <a href="https://github.com/exterm">Github</a>
     -
