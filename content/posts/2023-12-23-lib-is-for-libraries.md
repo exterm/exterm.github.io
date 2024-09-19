@@ -129,7 +129,7 @@ For many Rails developers, this is a new skill to master, which can seem dauntin
 
 - `packwerk` has extensive [usage docs](https://github.com/Shopify/packwerk/blob/main/USAGE.md).
 - Awesome former teammate [Maple Ong](https://mapleong.me/) wrote a great blog post about [Enforcing Modularity in Rails Apps with Packwerk](https://shopify.engineering/enforcing-modularity-rails-apps-packwerk).
-- You may also be interested in [my article on the Shopify blog](https://engineering.shopify.com/blogs/engineering/shopify-monolith) about the larger context of my modularity work at Shopify.
+- You may also be interested in [my article on the Shopify blog](https://shopify.engineering/shopify-monolith) about the larger context of my modularity work at Shopify.
 - For much shorter feedback cycles, if you're using VS Code, you can install [packwerk-vscode](https://marketplace.visualstudio.com/items?itemName=Gusto.packwerk-vscode) to see violations as you type.
 - To avoid or resolve dependency cycles, you'll quickly find yourself needing a working unserstanding of [inversion of control and dependency injection](https://stackoverflow.com/questions/3058/what-is-inversion-of-control#3140). Create abstractions and invert dependencies so they are opposed to the control flow. This probably deserves its own article.
 
