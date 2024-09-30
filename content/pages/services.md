@@ -38,6 +38,6 @@ As of June 2024, I'm fully booked for the time being. If you've read this far, y
 
 ### Say Hi!
 
-[Reach out via email](mailto:services+website@simplexity.quest) or [book a free 30 min intro call](https://cal.com/philip-mueller/30min) with me. I'm looking forward to hearing from you!
+[Reach out via email](mailto:services+website@simplexity.quest) or [book a free 30 min intro call](https://cal.com/philip-theus/30-min-meeting) with me. I'm looking forward to hearing from you!
 
 _By the way:_ I'll grant a significant discount off my usual rates if your company or project substantially contributes to combating climate change, biodiversity loss or the spread of misinformation.
