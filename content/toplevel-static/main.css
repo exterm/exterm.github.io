@@ -92,7 +92,7 @@ table {
   & td, & th {
     padding: 0.5em;
   }
-  & tr.odd {
+  & tbody tr:nth-child(odd) {
     background-color: #eee;
   }
 }
