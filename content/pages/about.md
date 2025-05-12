@@ -27,4 +27,4 @@ Hi! I'm Philip Theus. I am looking for problems worth solving. With tons of expe
 
 ### Say Hi!
 
-[Reach out via email](mailto:philip+website@simplexity.quest) or [book a 30 min call](https://cal.com/philip-theus/30-min-meeting) with me. Whether you know of interesting opportunities in the climate space or just want to catch up, I'm looking forward to hearing from you!
+[Reach out via email](mailto:philip@simplexity.quest) or [book a 30 min call](https://cal.com/philip-theus/30-min-meeting) with me. Whether you know of interesting opportunities in the climate space or just want to catch up, I'm looking forward to hearing from you!
