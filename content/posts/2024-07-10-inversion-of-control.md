@@ -24,6 +24,8 @@ Note that the kind of dependency we care about here is a static reference.
 
 ### No Inversion
 
+A calls into B and depends statically on it.
+
 ![A depends on B, A calls into B.](assets/inversion-of-control/no_inversion.png)
 
 ```ruby
@@ -46,6 +48,9 @@ end
 ➡️ *Great default*
 
 ### Full Decoupling
+
+A calls into B without any static dependency between the two.
+
 ![A and B depend on C, A calls into B.](assets/inversion-of-control/full_decoupling.png)
 
 ```ruby
@@ -95,6 +100,8 @@ end
 ➡️ *Use only when you need to achieve very low coupling*
 
 ### Plugin Mechanism
+
+A calls into B, but A doesn't statically depend on B.
 
 ![A calls into B, but B depends on A.](assets/inversion-of-control/plugin_mechanism.png)
 
