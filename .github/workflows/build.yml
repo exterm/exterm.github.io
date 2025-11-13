@@ -27,20 +27,14 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: '0'
-      - name: Install asdf
-        uses: asdf-vm/actions/setup@v3
       - name: Cache asdf
         id: cache
         uses: actions/cache@v4
         with:
           path: ~/.asdf
           key: asdf-${{ hashFiles('**/.tool-versions') }}
-      - name: install asdf plugins and tools
-        if: steps.cache.outputs.cache-hit != 'true'
-        run: |
-          asdf plugin add ruby
-          asdf plugin add pandoc https://github.com/aksdb/asdf-pandoc.git
-          asdf install
+      - name: Install asdf, plugins and tools
+        uses: asdf-vm/actions/install@v4
       - name: install ruby gems
         uses: ruby/setup-ruby@v1
         with:
