@@ -8,7 +8,7 @@
     -
     <a href="https://github.com/exterm">Github</a>
     -
-    <a rel="me" href="https://layer8.space/@exterm">Mastodon</a>
+    <a rel="me" href="https://social.simplexity.quest/@Philip">Mastodon</a>
   </p>
 
   <p>
