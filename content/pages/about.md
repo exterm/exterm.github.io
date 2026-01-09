@@ -13,8 +13,8 @@ Hi! I'm Philip Theus. I am looking for problems worth solving. With tons of expe
   - Developed the gradual modularization tool [Packwerk](https://github.com/shopify/packwerk), which has been the subject of [numerous talks and publications](packwerk-publications).
 - **2021-2022**: Prototyped Domain Events and a general API Gateway at Shopify
 - **2023**: [Developed LLM based product features](../posts/2024-01-31-llms-shiny-hammer) and co-designed [object model extensions](https://www.linkedin.com/posts/opslevel_need-to-add-cost-data-to-your-services-maybe-activity-7158483661464502272-5m4d) for [OpsLevel](https://opslevel.com).
-- **2024**: Supporting major software architecture transitions at [One Medical](https://onemedical.com) and [Ramp](https://ramp.com/), as well as providing architecture feedback to [Mangrove Systems](https://mangrovesystems.com).
-- **Also 2024**: Married my wonderful partner and took her last name (Mueller 👉🏼 Theus).
+- **2024**: Supporting major software architecture transitions at [One Medical](https://onemedical.com) and [Ramp](https://ramp.com/), as well as providing architecture feedback to [Mangrove Systems](https://mangrovesystems.com). Also, married my wonderful partner and took her last name (Mueller 👉🏼 Theus).
+- **2025**: Started [Clockwork](https://clockwork.energy/) with a few friends to solve EV charger reliability.
  
 ## Software Development Philosophy
 
